@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1555341322 source:d:\barrios crespo\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1555644742 source:c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
+1555423212 source:d:\barrios crespo matias\primercuatri_2019-master\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1555644719 c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1555644987 source:c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.c
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
+1555697430 source:c:\users\matu\desktop\primercuatri_2019-master\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1555696251 source:c:\users\matu\desktop\primercuatri_2019-master\15_05_19\empleado.c
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
+1555664168 c:\users\matu\desktop\primercuatri_2019-master\15_05_19\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1555697519 source:c:\users\matu\desktop\primercuatri_2019-master\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
+1555697153 c:\users\matu\desktop\primercuatri_2019-master\biblioteca_utn\utn.h
+
+1555644689 source:c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1555638337 c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.h
+
+1555946313 source:d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1555946313 d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.h
+
+1556040042 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.c
+	"empleado.h"
+	<string.h>
+	"../biblioteca_UTN/utn.h"
+
+1556040478 d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1556040478 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
+1556040044 source:e:\2019\15_05_19\empleado.c
+	"empleado.h"
+	<string.h>
+	"../biblioteca_UTN/utn.h"
+
+1556040480 e:\2019\15_05_19\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1556040480 source:e:\2019\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
