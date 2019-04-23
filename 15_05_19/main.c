@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
-#define TAM 6
+#define TAM 10
 #define LIBRE 0
 #define OCUPADO 1
 #include "empleado.h"
@@ -36,6 +36,7 @@ int main()
     };
 
 
+
     menuAbm(lista,sectores);
 
 
@@ -65,12 +66,12 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
         printf("6- Salir\n");
 
 
-        option=getValidInt("Ingrese una opcion: ");
+        option=getValidInt("Ingrese una opcion: \n");
 
         switch(option)
         {
         case 1:
-            cargarEmpleados(listaEmpleados,sectores);
+            cargarEmpleados(listaEmpleados,sectores,3);
             break;
         case 2:
             mostrarListaEmpleados(listaEmpleados, TAM,sectores,3);
@@ -113,7 +114,7 @@ void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
     int sector[]={1,2,3,2,1,3};
 
 
-    for(i=0; i<tam; i++)
+    for(i=0; i<6; i++)
     {
         lista[i].legajo = legajos[i];
         strcpy(lista[i].nombre, nombres[i]);

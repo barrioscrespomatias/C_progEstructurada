@@ -46,11 +46,12 @@ void mostrarEmpleado(eEmpleado unEmpleado,eSector sectores[], int tamSector)
         }
     }
 
-    printf("%5d - %15s - %5c - %10.2f - %10.2f - %10s\n", unEmpleado.legajo, unEmpleado.nombre, unEmpleado.sexo, unEmpleado.sueldoBruto, unEmpleado.sueldoNeto,  descripcionSector);
+
+    printf("%5d - %15s - %5c - %10.2f - %10.2f - %-10s\n", unEmpleado.legajo, unEmpleado.nombre, unEmpleado.sexo, unEmpleado.sueldoBruto, unEmpleado.sueldoNeto, descripcionSector);
 
 }
 
-void cargarEmpleados(eEmpleado lista[], eSector sectores[])
+void cargarEmpleados(eEmpleado lista[], eSector sectores[], int tamSector)
 {
 //    int i;
 //
@@ -61,14 +62,16 @@ void cargarEmpleados(eEmpleado lista[], eSector sectores[])
 //    int j, indiceLibre;
 
     int indice;
+    int valorHora;
+
 
     indice = buscarLibre(lista,TAM);
-    printf("ACA");
-    system("pause");
 
     if(indice != -1)
     {
-
+        //UTILIZO FUNCION QUE MUESTRA LOS SECTORES.
+        mostrarSectores(sectores,tamSector);
+        lista[indice].idSector = getValidInt("Ingrese sector: ");
 
         lista[indice].legajo = getValidInt("Ingrese un legajo: ");
 
@@ -76,7 +79,11 @@ void cargarEmpleados(eEmpleado lista[], eSector sectores[])
         // CHAR CON AMPERSAND
         getValidStringLetras("Ingrese su nombre: ","Error. Reingrese: ",lista[indice].nombre);
         lista[indice].sexo = getValidCharFM("Ingrese sexo f/m: ");
-        lista[indice].sueldoBruto = getValidFloat("Ingrese sueldo bruto: ");
+        lista[indice].cantidadHoras = getValidInt("Ingrese cantidad horas trabajadas: ");
+
+        //UTILIZO FUNCION QUE DEVUELVE EL VALOR DE LAS HORAS SEGUN SECTOR
+        valorHora = calcularHora(sectores,tamSector,lista[indice].idSector);
+        lista[indice].sueldoBruto = lista[indice].cantidadHoras * valorHora;
         lista[indice].sueldoNeto = lista[indice].sueldoBruto*0.85;
         lista[indice].isEmpty = OCUPADO;
 
@@ -150,10 +157,10 @@ void modificarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectore
     {
         opcion = getValidInt("\n\tMenu modificar:\n1.Nombre\n2.Sexo\n3.Sueldo Bruto\n4.Salir\n");
 
-    switch(opcion)
-    {
+        switch(opcion)
+        {
         //NOMBRE
-    case 1:
+        case 1:
             confirma = getValidCharSN("Confirma que quiere modificar este empleado? s/n: ");
             if((confirma == 's')||(confirma=='S'))
             {
@@ -161,9 +168,9 @@ void modificarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectore
                 printf("Nombre modificado exitosamente!!\n");
             }
 
-        break;
+            break;
         //SEXO
-    case 2:
+        case 2:
             confirma = getValidCharSN("Confirma que quiere modificar este empleado? s/n: ");
             if((confirma == 's')||(confirma=='S'))
             {
@@ -173,7 +180,7 @@ void modificarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectore
 
             break;
         //SUELDO BRUTO
-    case 3:
+        case 3:
             confirma = getValidCharSN("Confirma que quiere modificar el sueldo neto?\nACLARACION: Se modificara el sueldo bruto\n\nIngrese s/n: ");
             if((confirma == 's')||(confirma=='S'))
             {
@@ -184,11 +191,12 @@ void modificarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectore
 
             break;
         //SALIR
-    case 4:
-        break;
-    }
+        case 4:
+            break;
+        }
 
-    }while(opcion!=4);
+    }
+    while(opcion!=4);
 
 //    printf("Ingrese nuevo legajo: \n");
 //    scanf("%d",&listaEmpleados[empleado].legajo);
@@ -206,20 +214,58 @@ void borrarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectores[]
     legajo = buscarEmpleado(listaEmpleados,tam,3,listaSectores,tamSectores);
 
     confirma = getValidCharSN("Confirma que quiere BORRAR este empleado?\nIngrese s/n: ");
-            if((confirma == 's')||(confirma=='S'))
-            {
-                listaEmpleados[legajo].isEmpty = LIBRE;
-                printf("Empleado BORRADO exitosamente!!\n");
-            }
+    if((confirma == 's')||(confirma=='S'))
+    {
+        listaEmpleados[legajo].isEmpty = LIBRE;
+        printf("Empleado BORRADO exitosamente!!\n");
+    }
 
-            else
-            {
-                printf("El empleado no ha sido borrado.\n");
-            }
+    else
+    {
+        printf("El empleado no ha sido borrado.\n");
+    }
 
-            system("pause");
+    system("pause");
 
 }
+
+
+void mostrarSectores (eSector listaSectores[], int tamSector)
+{
+    int i;
+//    eSector sectorAuxiliar[];
+//    int idSectorBuscar = 0;
+
+    printf("\tLista de sectores: \n\n");
+    for(i=0; i<tamSector; i++)
+    {
+        printf("%d %s\n",listaSectores[i].id,listaSectores[i].descripcion);
+//       if(listaSectores[i].id == idSectorBuscar)
+    }
+}
+
+
+int calcularHora (eSector listaSectores[], int tamSector, int idSector)
+{
+    int i;
+    int valorHora;
+//    eSector sectorAuxiliar[];
+//    int idSectorBuscar = 0;
+
+    for(i=0; i<tamSector; i++)
+    {
+        if(listaSectores[i].id == idSector)
+        {
+            valorHora= listaSectores[i].valorHora;
+            break;
+        }
+
+//       if(listaSectores[i].id == idSectorBuscar)
+    }
+
+    return valorHora;
+}
+
 
 
 
