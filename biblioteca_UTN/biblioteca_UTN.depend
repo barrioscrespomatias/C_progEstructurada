@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1555546394 source:d:\laboratorio\2019\biblioteca_utn\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+
+1555546483 d:\laboratorio\2019\biblioteca_utn\utn.h
+
+1555546472 source:d:\laboratorio\2019\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
