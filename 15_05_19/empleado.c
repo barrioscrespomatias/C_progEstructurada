@@ -267,14 +267,57 @@ int calcularHora (eSector listaSectores[], int tamSector, int idSector)
 }
 
 
+void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp)
+{
+    int opcion = 0;
+
+    do
+    {
+        system("cls");
+        printf("\tMenu informes: \n\n");
+        opcion = getValidInt("1.Empleados por sector.\n2.Total sueldos por sector.\n3.Sector con mas empleados.\n8.salir\n");
+
+        switch(opcion)
+        {
+        case 1:
+            empleadosPorSector(listaSectores,listaEmpleados,tamSec,tamEmp);
+            break;
+        case 2:
+            sueldosPorSector(listaSectores,listaEmpleados,3,TAM);
+
+            break;
+
+        case 3:
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+
+        case 6:
+            break;
+
+        case 7:
+            break;
+        case 8:
+            break;
+        }
+
+    }while(opcion!=8);
+
+
+
+}
+
 void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados)
 {
+
     int sector, i;
     mostrarSectores(listaSectores,tamSectores);
 
     sector = getValidInt("Ingrese ID sector: ");
 
-    for (i=0; i<tamEmpleados;i++)
+    for (i=0; i<tamEmpleados; i++)
     {
         if(listaEmpleados[i].idSector == sector)
         {
@@ -282,8 +325,35 @@ void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int
         }
     }
 
+    system("pause");
 
 }
+
+void sueldosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados)
+{
+
+    int sector, i;
+    float acumuladorSueldos = 0;
+
+    mostrarSectores(listaSectores,tamSectores);
+
+    sector = getValidInt("Ingrese ID sector: ");
+
+    for (i=0; i<tamEmpleados; i++)
+    {
+        if(listaEmpleados[i].idSector == sector)
+        {
+            mostrarEmpleado(listaEmpleados[i],listaSectores,tamSectores);
+            acumuladorSueldos = acumuladorSueldos +listaEmpleados[i].sueldoBruto;
+        }
+    }
+
+    printf("El total de sueldos del sector es: %.2f\n",acumuladorSueldos);
+
+    system("pause");
+
+}
+
 
 
 

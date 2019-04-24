@@ -92,7 +92,7 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 
             break;
         case 6:
-            empleadosPorSector(sectores,listaEmpleados,3,TAM);
+            menuInformes(sectores,listaEmpleados,3,TAM);
             break;
         case 7:
             break;
@@ -100,7 +100,7 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 
         }
 
-  }while(option != 6 );
+  }while(option != 7 );
 
 
 
