@@ -45,6 +45,8 @@ void borrarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectores[]
 
 void mostrarSectores (eSector listaSectores[], int tamSector);
 int calcularHora (eSector listaSectores[], int tamSector, int idSector);
+void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
+
 
 
 

@@ -63,7 +63,8 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
         printf("3- Buscar un indice libre\n");
         printf("4- Borrar un empleado\n");
         printf("5- Modificar un empleado\n");
-        printf("6- Salir\n");
+        printf("6- Informes\n");
+        printf("7- Salir\n");
 
 
         option=getValidInt("Ingrese una opcion: \n");
@@ -91,6 +92,9 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 
             break;
         case 6:
+            empleadosPorSector(sectores,listaEmpleados,3,TAM);
+            break;
+        case 7:
             break;
 
 

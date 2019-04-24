@@ -267,6 +267,24 @@ int calcularHora (eSector listaSectores[], int tamSector, int idSector)
 }
 
 
+void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados)
+{
+    int sector, i;
+    mostrarSectores(listaSectores,tamSectores);
+
+    sector = getValidInt("Ingrese ID sector: ");
+
+    for (i=0; i<tamEmpleados;i++)
+    {
+        if(listaEmpleados[i].idSector == sector)
+        {
+            mostrarEmpleado(listaEmpleados[i],listaSectores,tamSectores);
+        }
+    }
+
+
+}
+
 
 
 
