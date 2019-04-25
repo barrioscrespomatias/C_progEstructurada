@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1556209728 source:c:\users\matu\desktop\practicas\2019\maximo\main.c
+	<stdio.h>
+	<stdlib.h>
+
