@@ -30,13 +30,14 @@ int main()
 
     eSector sectores[3]=
     {
-        {1,"Contabilidad",100},
+        {1,"Contable",100},
         {2,"Sistemas",200},
         {3,"RRHH",150},
     };
 
-    obtenerDescrpcionSector(sectores,3,1);
-    system("pause");
+
+
+
 
     menuAbm(lista,sectores);
 
@@ -112,14 +113,14 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
 {
     int i;
-    int legajos[]={1,8,9,7,2,4};
-    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo"};
-    char sexo[]={'M','F','M','M','M','M'};
-    float sueldosBruto[]={22000,22000,15000,4000,21000,6000};
-    int sector[]={1,2,3,2,1,3};
+    int legajos[]={1,8,9,7,2,4,10,22,99,100};
+    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo","Matute","Pepe","Tano","Pipa"};
+    char sexo[]={'M','F','M','M','M','M','M','M','M','M'};
+    float sueldosBruto[]={22000,22000,15000,4000,21000,6000,15000,1500,30000,100};
+    int sector[]={1,2,3,2,1,3,2,1,1,1};
 
 
-    for(i=0; i<6; i++)
+    for(i=0; i<10; i++)
     {
         lista[i].legajo = legajos[i];
         strcpy(lista[i].nombre, nombres[i]);

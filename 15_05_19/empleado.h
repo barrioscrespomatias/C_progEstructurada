@@ -15,7 +15,7 @@ typedef struct
 typedef struct
 {
     int id;
-
+//    int cantEmpleadosSector;
     char descripcion[20];
     float valorHora;
 }eSector;
@@ -48,10 +48,12 @@ int calcularHora (eSector listaSectores[], int tamSector, int idSector);
 void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
 void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp);
 void sueldosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
-void sectorConMasEmpleados(eSector listaSectores[], eEmpleado listaEmpleados[],int tamSec, int tamEmp);
 
 
 void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId);
+int contadorEmpleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp, int idSector);
+void sectorConMasEmpleados(eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp);
+
 
 
 

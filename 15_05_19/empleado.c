@@ -288,6 +288,7 @@ void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSe
             break;
 
         case 3:
+            sectorConMasEmpleados(listaSectores,listaEmpleados,3,TAM);
             break;
         case 4:
             break;
@@ -303,7 +304,8 @@ void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSe
             break;
         }
 
-    }while(opcion!=8);
+    }
+    while(opcion!=8);
 
 
 
@@ -359,7 +361,7 @@ void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId)
     int i;
     char descripcionSector[20];
 
-    for(i=0; i<tamSec;i++)
+    for(i=0; i<tamSec; i++)
     {
         if(listaSectores[i].id == sectorId)
         {
@@ -370,9 +372,55 @@ void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId)
     }
 
     printf("El sector es: %s\n",descripcionSector);
+    system("pause");
+}
+
+void sectorConMasEmpleados(eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp)
+{
+    int i;
+    int idSector = 0;
+    int cantidadEmpleados = 0;
+    char descripcionSectorMasEmpleados[20];
+    int maximo;
+    int flag = 0;
+
+    for(i=0; i<tamSec; i++)
+    {
+        if(listaSectores[i].id == listaEmpleados[i].idSector)
+        {
+            idSector = listaSectores[i].id;
+            cantidadEmpleados = contadorEmpleadosPorSector(listaSectores,listaEmpleados,tamSec,tamEmp,idSector);
+
+            if(flag == 0 || cantidadEmpleados>maximo)
+            {
+                maximo = cantidadEmpleados;
+                strcpy(descripcionSectorMasEmpleados,listaSectores[i].descripcion);
+                flag = 1;
+            }
+
+        }
+
+    }
+
+       printf("El sector con mas empleados es %s y tiene %d\n",descripcionSectorMasEmpleados, maximo);
+       system("pause");
+
 }
 
 
 
+int contadorEmpleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp, int idSector)
+{
+    int i;
+    int contadorEmpleados = 0;
 
+    for (i=0; i<tamEmp; i++)
+    {
+        if(listaEmpleados[i].idSector == idSector && listaEmpleados[i].isEmpty != LIBRE)
+        {
+            contadorEmpleados ++;
+        }
+    }
 
+    return contadorEmpleados;
+}
