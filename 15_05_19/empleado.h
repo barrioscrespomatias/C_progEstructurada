@@ -48,6 +48,10 @@ int calcularHora (eSector listaSectores[], int tamSector, int idSector);
 void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
 void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp);
 void sueldosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
+void sectorConMasEmpleados(eSector listaSectores[], eEmpleado listaEmpleados[],int tamSec, int tamEmp);
+
+
+void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId);
 
 
 

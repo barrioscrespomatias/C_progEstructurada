@@ -354,6 +354,24 @@ void sueldosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int t
 
 }
 
+void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId)
+{
+    int i;
+    char descripcionSector[20];
+
+    for(i=0; i<tamSec;i++)
+    {
+        if(listaSectores[i].id == sectorId)
+        {
+            strcpy(descripcionSector,listaSectores[i].descripcion);
+            break;
+        }
+
+    }
+
+    printf("El sector es: %s\n",descripcionSector);
+}
+
 
 
 

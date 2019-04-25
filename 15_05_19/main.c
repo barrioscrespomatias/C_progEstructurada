@@ -35,7 +35,8 @@ int main()
         {3,"RRHH",150},
     };
 
-
+    obtenerDescrpcionSector(sectores,3,1);
+    system("pause");
 
     menuAbm(lista,sectores);
 

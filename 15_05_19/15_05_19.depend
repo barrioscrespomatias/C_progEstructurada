@@ -117,3 +117,27 @@
 
 1556052148 c:\users\matu\desktop\2\primercuatri_2019-master\biblioteca_utn\utn.h
 
+1556125086 source:c:\users\matias\desktop\primercuatri_2019-master\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1556125086 c:\users\matias\desktop\primercuatri_2019-master\biblioteca_utn\utn.h
+
+1556136532 source:c:\users\matias\desktop\primercuatri_2019-master\15_05_19\empleado.c
+	"empleado.h"
+	<string.h>
+	"../biblioteca_UTN/utn.h"
+
+1556136532 c:\users\matias\desktop\primercuatri_2019-master\15_05_19\empleado.h
+	<stdio.h>
+	<stdlib.h>
+
+1556136584 source:c:\users\matias\desktop\primercuatri_2019-master\15_05_19\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"empleado.h"
+	"../biblioteca_UTN/utn.h"
+
