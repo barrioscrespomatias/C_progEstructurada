@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define TAM 10
+#define TAM 13
 #define LIBRE 0
 #define OCUPADO 1
 
@@ -19,6 +19,14 @@ typedef struct
     char descripcion[20];
     float valorHora;
 }eSector;
+
+typedef struct
+{
+    int idSector;
+    int contadorEmpleados;
+    char descripcionAuxiliar[50];
+
+}eSectorAuxiliar;
 
 
 typedef struct
@@ -46,13 +54,15 @@ void borrarEmpleado(eEmpleado listaEmpleados[], int tam, eSector listaSectores[]
 void mostrarSectores (eSector listaSectores[], int tamSector);
 int calcularHora (eSector listaSectores[], int tamSector, int idSector);
 void empleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
-void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp);
+void menuInformes(eSectorAuxiliar listaSectoresAuxiliares[], eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp);
 void sueldosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSectores, int tamEmpleados);
 
 
 void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId);
 int contadorEmpleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp, int idSector);
-void sectorConMasEmpleados(eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp);
+void sectorConMasEmpleados(eSectorAuxiliar listaSectoresAuxiliares[], eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp);
+
+void inicializarContador(eSector listaSectores[],eSectorAuxiliar sectoresAuxiliares[], int tamSec);
 
 
 

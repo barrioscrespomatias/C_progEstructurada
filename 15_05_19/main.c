@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
-#define TAM 10
+#define TAM 13
 #define LIBRE 0
 #define OCUPADO 1
 #include "empleado.h"
@@ -12,7 +12,7 @@
 
 
 // FUNCIONES SE DECLARAN DEBAJO DE LAS ESTRUCTURAS.
-void menuAbm(eEmpleado listaEmpleados[], eSector sectores[]);
+void menuAbm(eSectorAuxiliar listaAux[],eEmpleado listaEmpleados[], eSector sectores[]);
 void hardcodearDatosEmpleados(eEmpleado lista[], int tam);
 
 
@@ -35,11 +35,18 @@ int main()
         {3,"RRHH",150},
     };
 
+    eSectorAuxiliar listaSectoresAux[3] = {
+
+    {0,0,""},
+    {0,0,""},
+    {0,0,""},
+    };
 
 
 
 
-    menuAbm(lista,sectores);
+
+    menuAbm(listaSectoresAux,lista,sectores);
 
 
 
@@ -49,7 +56,7 @@ int main()
 
 
 
-void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
+void menuAbm(eSectorAuxiliar listaAux[],eEmpleado listaEmpleados[], eSector sectores[])
 {
 
     int option = 0;
@@ -94,7 +101,7 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 
             break;
         case 6:
-            menuInformes(sectores,listaEmpleados,3,TAM);
+            menuInformes(listaAux,sectores,listaEmpleados,3,TAM);
             break;
         case 7:
             break;
@@ -113,14 +120,14 @@ void menuAbm(eEmpleado listaEmpleados[], eSector sectores[])
 void hardcodearDatosEmpleados(eEmpleado lista[], int tam)
 {
     int i;
-    int legajos[]={1,8,9,7,2,4,10,22,99,100};
-    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo","Matute","Pepe","Tano","Pipa"};
-    char sexo[]={'M','F','M','M','M','M','M','M','M','M'};
-    float sueldosBruto[]={22000,22000,15000,4000,21000,6000,15000,1500,30000,100};
-    int sector[]={1,2,3,2,1,3,2,1,1,1};
+    int legajos[]={1,8,9,7,2,4,10,22,99,100,23,25,98};
+    char nombres[][50]={"Carlos","Maria","Carlos","Pedro","Carlos","Mateo","Matute","Pepe","Tano","Pipa","Mujica","Putin","Nestor"};
+    char sexo[]={'M','F','M','M','M','M','M','M','M','M','M','M','M'};
+    float sueldosBruto[]={22000,22000,15000,4000,21000,6000,15000,1500,30000,100,1500,30000,100};
+    int sector[]={1,2,3,2,1,3,2,1,1,1,2,2,3};
 
 
-    for(i=0; i<10; i++)
+    for(i=0; i<13; i++)
     {
         lista[i].legajo = legajos[i];
         strcpy(lista[i].nombre, nombres[i]);

@@ -267,7 +267,7 @@ int calcularHora (eSector listaSectores[], int tamSector, int idSector)
 }
 
 
-void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp)
+void menuInformes(eSectorAuxiliar listaSectoresAuxiliares[], eSector listaSectores[], eEmpleado listaEmpleados[], int tamSec, int tamEmp)
 {
     int opcion = 0;
 
@@ -288,7 +288,7 @@ void menuInformes(eSector listaSectores[], eEmpleado listaEmpleados[], int tamSe
             break;
 
         case 3:
-            sectorConMasEmpleados(listaSectores,listaEmpleados,3,TAM);
+            sectorConMasEmpleados(listaSectoresAuxiliares,listaSectores,listaEmpleados,3,TAM);
             break;
         case 4:
             break;
@@ -375,12 +375,27 @@ void obtenerDescrpcionSector(eSector listaSectores[],int tamSec, int sectorId)
     system("pause");
 }
 
-void sectorConMasEmpleados(eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp)
+
+// NUEVA
+//void inicializarContador(eSector listaSectores[],eSectorAuxiliar sectoresAuxiliares[], int tamSec)
+//{
+//    int i;
+//    for(i=0; i<tamSec; i++)
+//    {
+//        sectoresAuxiliares[i].idSector = listaSectores.id;
+//        sectoresAuxiliares[i].contadorEmpleados = 0;
+//        strcpy(sectoresAuxiliares[i].descripcionAuxiliar,listaSectores[i].descripcion);
+//    }
+//}
+
+
+
+void sectorConMasEmpleados(eSectorAuxiliar listaSectoresAuxiliares[], eSector listaSectores[],eEmpleado listaEmpleados[], int tamSec, int tamEmp)
 {
     int i;
     int idSector = 0;
-    int cantidadEmpleados = 0;
-    char descripcionSectorMasEmpleados[20];
+//    int cantidadEmpleados = 0;
+//    char descripcionSectorMasEmpleados[20];
     int maximo;
     int flag = 0;
 
@@ -389,21 +404,49 @@ void sectorConMasEmpleados(eSector listaSectores[],eEmpleado listaEmpleados[], i
         if(listaSectores[i].id == listaEmpleados[i].idSector)
         {
             idSector = listaSectores[i].id;
-            cantidadEmpleados = contadorEmpleadosPorSector(listaSectores,listaEmpleados,tamSec,tamEmp,idSector);
+            listaSectoresAuxiliares[i].contadorEmpleados = contadorEmpleadosPorSector(listaSectores,listaEmpleados,tamSec,tamEmp,idSector);
 
-            if(flag == 0 || cantidadEmpleados>maximo)
+            if(flag == 0 || listaSectoresAuxiliares[i].contadorEmpleados>=maximo)
             {
-                maximo = cantidadEmpleados;
-                strcpy(descripcionSectorMasEmpleados,listaSectores[i].descripcion);
+                maximo = listaSectoresAuxiliares[i].contadorEmpleados;
+                //strcpy(descripcionSectorMasEmpleados,listaSectores[i].descripcion);
+                strcpy(listaSectoresAuxiliares[i].descripcionAuxiliar,listaSectores[i].descripcion);
+
                 flag = 1;
+
             }
 
         }
 
+//        printf("%s\n",listaSectoresAuxiliares[i].descripcionAuxiliar);
+//        printf("%d\n",listaSectoresAuxiliares[i].contadorEmpleados);
+//        system("pause");
+
+
+//        if(maximo == listaSectoresAuxiliares[i].contadorEmpleados)
+//        {
+//                printf("Cantidad %d\nSector: %s\n ",maximo, listaSectoresAuxiliares[i].descripcionAuxiliar);
+//                system("pause");
+//
+//        }
+
     }
 
-       printf("El sector con mas empleados es %s y tiene %d\n",descripcionSectorMasEmpleados, maximo);
-       system("pause");
+    for(i=0; i<tamSec; i++)
+    {
+        if(maximo == listaSectoresAuxiliares[i].contadorEmpleados)
+        {
+            printf("Sector %s Cantidad %d\n",listaSectoresAuxiliares[i].descripcionAuxiliar, listaSectoresAuxiliares[i].contadorEmpleados);
+
+        }
+
+
+
+    }
+
+    system("pause");
+
+
 
 }
 
@@ -418,7 +461,10 @@ int contadorEmpleadosPorSector(eSector listaSectores[], eEmpleado listaEmpleados
     {
         if(listaEmpleados[i].idSector == idSector && listaEmpleados[i].isEmpty != LIBRE)
         {
-            contadorEmpleados ++;
+
+            //sectoresAuxiliares[i].contadorEmpleados++;
+
+            contadorEmpleados++;
         }
     }
 

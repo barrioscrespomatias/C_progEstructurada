@@ -53,24 +53,24 @@
 
 1555638337 c:\users\matias\desktop\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.h
 
-1555946313 source:d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.c
+1556212012 source:d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"utn.h"
 
-1555946313 d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.h
+1556212012 d:\matias barrios crespo\primercuatri_2019-master\biblioteca_utn\utn.h
 
-1556040042 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.c
+1556550257 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.c
 	"empleado.h"
 	<string.h>
 	"../biblioteca_UTN/utn.h"
 
-1556040478 d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.h
+1556542923 d:\matias barrios crespo\primercuatri_2019-master\15_05_19\empleado.h
 	<stdio.h>
 	<stdlib.h>
 
-1556040478 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\main.c
+1556550003 source:d:\matias barrios crespo\primercuatri_2019-master\15_05_19\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
