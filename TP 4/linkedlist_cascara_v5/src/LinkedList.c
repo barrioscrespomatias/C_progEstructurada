@@ -215,9 +215,26 @@ int ll_add(LinkedList* this, void* pElement)
                             (pElement) Si funciono correctamente
  *
  */
+
+
+
+/// Retorna un puntero al elemento que se encuentra en el índice especificado.
+/// Verificando que el puntero this sea distinto de NULL y que index sea positivo e inferior
+/// al tamaño del array. Si la verificación falla la función retorna (NULL)
+/// y si tiene éxito retorna el elemento.
+
+
 void* ll_get(LinkedList* this, int index)
 {
     void* returnAux = NULL;
+    Node* auxiliar = NULL;
+    auxiliar = (Node*)malloc(sizeof(Node));
+
+    if(this!= NULL && index>=0 && index < ll_len(this))
+    {
+        auxiliar = getNode(this,index);
+        returnAux  = auxiliar->pElement;
+    }
 
     return returnAux;
 }
@@ -235,6 +252,19 @@ void* ll_get(LinkedList* this, int index)
 int ll_set(LinkedList* this, int index,void* pElement)
 {
     int returnAux = -1;
+    Node* nodoAuxiliar = (Node*)malloc(sizeof(Node));
+
+    if(this!=NULL && index>= 0 && index < ll_len(this))
+    {
+//        nodoAuxiliar = getNode(this,index);
+//        nodoAuxiliar->pElement = pElement;
+
+        nodoAuxiliar = getNode(this,index);
+        nodoAuxiliar->pElement = pElement;
+        returnAux = 0;
+
+
+    }
 
     return returnAux;
 }
