@@ -119,40 +119,50 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
-    Node *pNode = NULL;
+    Node *pNodeAnterior = NULL;
+    Node *pNodeNuevo = NULL;
 
+    ///Asigno memoria para dos nodos
+    pNodeNuevo =(Node*) malloc(sizeof(Node));
+    pNodeAnterior = (Node*) malloc(sizeof(Node));
 
-
-    int i;
-
-
-
+    ///Condiciones de ingreso
     if(this!= NULL && nodeIndex>=0 && nodeIndex <=ll_len(this))
     {
-//            printf("ACA OK\n");
-//            system("pause");
-            pNode->pElement = pElement;
-            this->pFirstNode =   pNode->pElement;
+        ///OBTENGO EL NODO ANTERIOR
+        /// GET NODE YA TIENE UN FOR. ME DEYVUELVE EL NODO
+        pNodeAnterior = getNode(this,nodeIndex-1);
 
-        for(i=0; i<nodeIndex; i++)
+        /// INICIO DE LA LISTA
+        if(nodeIndex == 0)
         {
 
-
-            break;
-
-//                this->pFirstNode = pNode;
-//                break;
+            pNodeNuevo->pNextNode = this->pFirstNode;
+            this->pFirstNode = pNodeNuevo;
+            this->size++;
+            returnAux = 0;
         }
-
+        /// CUALQUIER PARTE DE LA LISTA QUE NO SEA EL INICIO
         else
         {
-            printf("LALA\n");
+            pNodeAnterior = getNode(this,nodeIndex-1);
+            pNodeNuevo->pNextNode = pNodeAnterior->pNextNode;
+            pNodeAnterior->pNextNode = pNodeNuevo;
+            this->size ++;
+            returnAux = 0;
+
 
         }
+        ///PASO EL ELEMENTO AL NUEVO NODO
+        pNodeNuevo->pElement = pElement;
+
     }
 
 
-return returnAux;
+
+
+
+    return returnAux;
 }
 
 
@@ -181,27 +191,18 @@ int test_addNode(LinkedList* this, int nodeIndex,void* pElement)
 int ll_add(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
+    int indiceUltimo = ll_len(this);
+
+//    printf("%d\n",indiceUltimo-1);
+//    system("pause");
+
+//    Node *pNodeAnterior = NULL;
 
     if(this!= NULL)
     {
-        actual = this->pFirstNode;
+        addNode(this,indiceUltimo,pElement);
+        returnAux = 0;
     }
-
-
-    while(actual != NULL)
-
-    {
-        actual = actual ->pnextNode;
-        indice ++;
-    }
-
-    ///if(!addNODE)
-
-    ///LLAMO A FUNCION ADD NODE;
-
-
-    retorno = 0;
-//    for(i = 0 ; i<)
 
     return returnAux;
 }
