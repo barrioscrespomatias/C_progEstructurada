@@ -11,10 +11,18 @@ Employee* employee_new()
     nuevoEmpleado = (Employee*)malloc(sizeof(Employee));
     return nuevoEmpleado;
 }
-//Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas)
-//{
-//
-//}
+Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas)
+{
+    Employee * auxiliar;
+    auxiliar = employee_new();
+
+    auxiliar->id = atoi(id);
+    strcpy(auxiliar->nombre,nombre);
+    auxiliar->horasTrabajadas = atoi(horasTrabajadas);
+
+}
+
+
 //void employee_delete();
 
 
@@ -36,14 +44,15 @@ int employee_setId(Employee* this,int id)
 /// DEVUELVE 0 en caso de que hay un error. sino el ID obtenido
 int employee_getId(Employee* this,int* id)
 {
-    *id = 0;
+    int getIdOk = 0;
 
     if(this!= NULL && this->id >0)
     {
         *id = this->id;
+        getIdOk = 1;
     }
 
-    return *id;
+    return getIdOk;
 }
 
 
@@ -52,20 +61,20 @@ int employee_getId(Employee* this,int* id)
 int employee_setNombre(Employee* this,char* nombre)
 {
     int setOk = 0;
-//    strcpy(nombre,this->nombre);
     int size = strlen(nombre);
 
-
-    printf("CANTIDAD DELETRAS ES: %d\n\n", size);
-
     if(this!= NULL && size>0)
-{
+    {
 
-    strcpy(this->nombre, nombre);
-    setOk = 1;
-}
+        strcpy(this->nombre, nombre);
+        setOk = 1;
+    }
+    else
+    {
+        printf("Error. El puntero es NULL o el nombre ingresado no contiene caracteres.");
+    }
 
-return setOk;
+    return setOk;
 
 }
 
@@ -84,21 +93,83 @@ int employee_getNombre(Employee* this,char* nombre)
         strcpy(nombre,this->nombre);
         getOk = 1;
     }
+    else
+    {
+        printf("Error. El puntero es NULL o el nombre no tiene caracteres.\n");
+    }
 
     return getOk;
 
 }
 
-///////////////////////////////////////////////////////
 
 
 
-//int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
-//int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
+
+int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas)
+{
+    int setOk = 0;
+
+    if(this!= NULL && horasTrabajadas>0)
+    {
+        this->horasTrabajadas = horasTrabajadas;
+        setOk = 1;
+    }
+
+    return setOk;
+
+}
+
+int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas)
+{
+    int getIdOk = 0;
+
+    if(this!= NULL && this->horasTrabajadas>0)
+    {
+        *horasTrabajadas = this->horasTrabajadas;
+        getIdOk = 1;
+    }
+    else
+    {
+        printf("Error. El puntero es NULL o las horas trabajadas son menor a 1");
+
+    }
+
+    return getIdOk;
+
+}
 
 
 
-//int employee_setSueldo(Employee* this,int sueldo);
-//int employee_getSueldo(Employee* this,int* sueldo);
-//
+int employee_setSueldo(Employee* this,int sueldo)
+{
+    int setOk = 0;
+
+    if(this!= NULL && sueldo>0)
+    {
+        this->sueldo = sueldo;
+        setOk = 1;
+    }
+
+    return setOk;
+
+
+}
+int employee_getSueldo(Employee* this,int* sueldo)
+{
+    int getSueldoOk = 0;
+    if(this!= NULL && this->sueldo >0)
+    {
+
+        *sueldo = this->sueldo;
+        getSueldoOk = 1;
+    }
+    else
+    {
+        printf("Error. El puntero es NULL o el sueldo es menor a 1");
+    }
+
+    return getSueldoOk;
+
+}
 

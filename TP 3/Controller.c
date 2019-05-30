@@ -11,8 +11,29 @@
  * \return int
  *
  */
-int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
+int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 {
+
+
+    FILE* pFile;
+
+    if(pFile != NULL)
+    {
+        pFile = fopen("data.csv", "r");
+
+    }
+
+    else
+    {
+        printf("Error de apertura de archivo texto");
+    }
+
+    ///LLAMAR A LA FUNCION PARSEO TEXTO QUE SE ENCARGUE DE MOSTRAR.
+    parser_EmployeeFromText(pFile,pArrayListEmployee);
+
+    fclose(pFile);
+
+
     return 1;
 }
 
@@ -23,7 +44,7 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
+int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
     return 1;
 }
@@ -37,6 +58,7 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+
     return 1;
 }
 
@@ -95,7 +117,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
+int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
     return 1;
 }
@@ -107,7 +129,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
+int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
     return 1;
 }

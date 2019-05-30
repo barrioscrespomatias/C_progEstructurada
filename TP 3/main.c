@@ -22,63 +22,96 @@
 
 int main()
 {
-    Employee *punteroEmpleados;
-    Employee listaEmpleados[5];
-    int idAux;
-    char nombre[100];
-    int error = 0;
-
-    punteroEmpleados = listaEmpleados;
-
-    strcpy(punteroEmpleados[0].nombre,"Pedro");
-    punteroEmpleados[0].id = 1000;
-    punteroEmpleados[0].horasTrabajadas = 50;
-    punteroEmpleados[0].sueldo = 10000;
 
 
-    strcpy(punteroEmpleados[1].nombre,"Jose");
-    punteroEmpleados[1].id = 3;
-    punteroEmpleados[1].horasTrabajadas = 10;
-    punteroEmpleados[1].sueldo = 100;
+
+//    Employee *punteroEmpleados;
+//    Employee listaEmpleados[5];
+//
+//    int idAux;
+//    char nombre[100];
+//    int error = 0;
+//
+//    punteroEmpleados = listaEmpleados;
+//
+//    strcpy(punteroEmpleados[0].nombre,"Pedro");
+//    punteroEmpleados[0].id = 1000;
+//    punteroEmpleados[0].horasTrabajadas = 50;
+//    punteroEmpleados[0].sueldo = 10000;
+//
+//
+//    strcpy(punteroEmpleados[1].nombre,"Jose");
+//    punteroEmpleados[1].id = 3;
+//    punteroEmpleados[1].horasTrabajadas = 10;
+//    punteroEmpleados[1].sueldo = 100;
+//
+//
+//    strcpy(punteroEmpleados[2].nombre,"Maria");
+//    punteroEmpleados[2].id = 50;
+//    punteroEmpleados[2].horasTrabajadas = 1;
+//    punteroEmpleados[2].sueldo = 10000;
+//
+//    int sueldoAux;
+//    int getOk=0;
+//    int setOk=0;
+//    int sueldoSeteado = 5;
 
 
-    strcpy(punteroEmpleados[2].nombre,"Maria");
-    punteroEmpleados[2].id = 50;
-    punteroEmpleados[2].horasTrabajadas = 1;
-    punteroEmpleados[2].sueldo = 10000;
+
+
+//    getOk = employee_getSueldo(punteroEmpleados+0,&sueldoAux);
+//
+//    printf("Sueldo obtenido de la estructura es: %d\n\n",sueldoAux);
+//
+//    printf("Seteo la estructura con un nuevo sueldo de 5\n\n");
+//    setOk = employee_setSueldo(punteroEmpleados+0,sueldoSeteado);
+//    printf("Imprimo la nueva estrcutura: \n");
+//    printf("%d",punteroEmpleados->sueldo);
 
 ///PRUEBA NOMBRE GET/SET
-
-char name[30] = "Jamaica";
-int getOK;
-
-getOK = employee_getNombre(punteroEmpleados+2, name);
-
-if(getOK ==1)
-{
-    printf("EL nombre obtenido por referencia es: %s\n\n",name);
-
-}
-
-printf("\n\n");
-printf("Prueba del SET\n\n");
-///PRUEBA DEL SET
-printf("Si es 1 es verdadero: %d\n\n",employee_setNombre(punteroEmpleados+2,name));
-
-printf("Imprimo la variable local al main: %s",punteroEmpleados[2].nombre);
-
-
-
-
-/// PRUEBA ID GET / SET
-//    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
 //
+//char name[30] = " ";
+//char name2[30] = "Jamaica";
+//int getOK;
+//int setOk = 0;
+
+
+/////Guardo el string de la estrcutura en el auxiliar name (Que se encuentra vacio)
+/////Lo tomo del tercer elemento (+2) del puntero a estrcutura
+//
+//getOK = employee_getNombre(punteroEmpleados+2, name);
+///// SI DEVUELVE 1, se pudo setear.
+//if(getOK ==1)
+//{
+//    /// IMPRIMO LA NUEVA VARIABLE NAME
+//    printf("El nombre obtenido de la estructura es: %s\n\n",name);
+//
+//}
+//
+//printf("\n\n");
+//printf("Prueba del SET ingresando Jamaica\n\n");
+//
+/////PRUEBA DEL SET
+///// SETEANDO LA VARIABLE NAME2
+//setOk = employee_setNombre(punteroEmpleados+2,name2);
+/////IMPRIMO PARA MOSTRAR EL SETEO CON NAME2
+//printf("Imprimo la nueva variable dentro de la estructura: %s",punteroEmpleados[2].nombre);
+
+
+//    int guardoId;
+
+///// PRUEBA ID GET / SET
+//    idAux = employee_getId(punteroEmpleados+0,&guardoId);
+//    printf("Obtengo ID estrcutura: %d\n\n",guardoId);
 //    int id = 50;
 //    printf("Seteo en %d: \n",id);
 //
-//    employee_setId(punteroEmpleados,id);
-//    printf("Imprimo: \n\n");
-//    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
+//    employee_setId(punteroEmpleados+0,id);
+//    printf("Imprimo nuevamente ID estructura: \n\n");
+//
+//    printf("%d",punteroEmpleados->id);
+
+
 
 
 //    int id;
@@ -89,15 +122,34 @@ printf("Imprimo la variable local al main: %s",punteroEmpleados[2].nombre);
 
 
 
-//    int option = 0;
-//    LinkedList* listaEmpleados = ll_newLinkedList();
-//    do{
-//        switch(option)
-//        {
-//            case 1:
-//                controller_loadFromText("data.csv",listaEmpleados);
-//                break;
-//        }
-//    }while(option != 10);
+
+
+    int option = 0;
+    LinkedList* listaEmpleados = ll_newLinkedList();
+    do{
+         system("cls");
+            printf("\tMENU PRINCIPAL\n\n");
+            printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto). \n");
+            printf("2. Cargar los datos de los empleados desde el archivo data.bin (modo binario). \n");
+            printf("3. Alta de empleado\n");
+            printf("4. Modificar datos de empleado\n");
+            printf("5. Baja de empleado\n");
+            printf("6. Listar empleados\n");
+            printf("7. Ordenar empleados\n");
+            printf("8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n");
+            printf("9. Guardar los datos de los empleados en el archivo data.bin (modo binario).\n");
+            printf("10. Salir\n");
+
+
+            printf("\n\nIngrese una opcion: ");
+            scanf("%d",&option);
+
+        switch(option)
+        {
+            case 1:
+                controller_loadFromText("data.csv",listaEmpleados);
+                break;
+        }
+    }while(option != 10);
     return 0;
 }
