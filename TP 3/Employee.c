@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include <string.h>
 
 Employee* employee_new()
 {
@@ -44,13 +45,59 @@ int employee_getId(Employee* this,int* id)
 
     return *id;
 }
-//
-//int employee_setNombre(Employee* this,char* nombre);
-//int employee_getNombre(Employee* this,char* nombre);
-//
+
+
+/// SET NOMBRE
+
+int employee_setNombre(Employee* this,char* nombre)
+{
+    int setOk = 0;
+//    strcpy(nombre,this->nombre);
+    int size = strlen(nombre);
+
+
+    printf("CANTIDAD DELETRAS ES: %d\n\n", size);
+
+    if(this!= NULL && size>0)
+{
+
+    strcpy(this->nombre, nombre);
+    setOk = 1;
+}
+
+return setOk;
+
+}
+
+///GET NOMBRE
+
+int employee_getNombre(Employee* this,char* nombre)
+{
+    int getOk = 0;
+    int size = 0;
+
+    size = strlen(this->nombre);
+
+    if(this!= NULL && size >0)
+    {
+        /// SIEMPRE ME VOY ACORDAR DEL STRCPY
+        strcpy(nombre,this->nombre);
+        getOk = 1;
+    }
+
+    return getOk;
+
+}
+
+///////////////////////////////////////////////////////
+
+
+
 //int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
 //int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
-//
+
+
+
 //int employee_setSueldo(Employee* this,int sueldo);
 //int employee_getSueldo(Employee* this,int* sueldo);
 //

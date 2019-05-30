@@ -25,7 +25,8 @@ int main()
     Employee *punteroEmpleados;
     Employee listaEmpleados[5];
     int idAux;
-
+    char nombre[100];
+    int error = 0;
 
     punteroEmpleados = listaEmpleados;
 
@@ -46,16 +47,38 @@ int main()
     punteroEmpleados[2].horasTrabajadas = 1;
     punteroEmpleados[2].sueldo = 10000;
 
+///PRUEBA NOMBRE GET/SET
+
+char name[30] = "Jamaica";
+int getOK;
+
+getOK = employee_getNombre(punteroEmpleados+2, name);
+
+if(getOK ==1)
+{
+    printf("EL nombre obtenido por referencia es: %s\n\n",name);
+
+}
+
+printf("\n\n");
+printf("Prueba del SET\n\n");
+///PRUEBA DEL SET
+printf("Si es 1 es verdadero: %d\n\n",employee_setNombre(punteroEmpleados+2,name));
+
+printf("Imprimo la variable local al main: %s",punteroEmpleados[2].nombre);
 
 
-    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
 
-    int id = 50;
-    printf("Seteo en %d: \n",id);
 
-    employee_setId(punteroEmpleados,id);
-    printf("Imprimo: \n\n");
-    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
+/// PRUEBA ID GET / SET
+//    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
+//
+//    int id = 50;
+//    printf("Seteo en %d: \n",id);
+//
+//    employee_setId(punteroEmpleados,id);
+//    printf("Imprimo: \n\n");
+//    printf("%d\n\n",idAux = employee_getId(punteroEmpleados+0,&idAux));
 
 
 //    int id;

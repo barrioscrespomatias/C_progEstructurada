@@ -86,3 +86,37 @@
 	"LinkedList.h"
 	"Employee.h"
 
+1559149189 source:c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559149189 c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\linkedlist.h
+
+1559149189 c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\employee.h
+
+1559166169 source:c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1559149189 c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\controller.h
+
+1559166301 source:c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1559149189 source:c:\users\matias\desktop\nuevo\primercuatri_2019-master\tp 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
