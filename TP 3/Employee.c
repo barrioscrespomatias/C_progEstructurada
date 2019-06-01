@@ -11,16 +11,16 @@ Employee* employee_new()
     nuevoEmpleado = (Employee*)malloc(sizeof(Employee));
     return nuevoEmpleado;
 }
-Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas)
-{
-    Employee * auxiliar;
-    auxiliar = employee_new();
+//Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas)
+//{
+//    Employee * auxiliar;
+//    auxiliar = employee_new();
+//
+//    auxiliar->id = atoi(id);
+//    strcpy(auxiliar->nombre,nombre);
+//    auxiliar->horasTrabajadas = atoi(horasTrabajadas);
 
-    auxiliar->id = atoi(id);
-    strcpy(auxiliar->nombre,nombre);
-    auxiliar->horasTrabajadas = atoi(horasTrabajadas);
-
-}
+//}
 
 
 //void employee_delete();

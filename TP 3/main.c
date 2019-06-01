@@ -149,7 +149,33 @@ int main()
             case 1:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
+            case 2:
+                controller_addEmployee(listaEmpleados);
+                break;
+            case 3:
+                controller_ListEmployee(listaEmpleados);
+                break;
+            case 4:
+                printf("CANTIDAD: %d\n",ll_len(listaEmpleados));
+                system("pause");
+
+                Employee *empleados;
+                int i;
+                for(i=0; i<ll_len(listaEmpleados);i++)
+                {
+                    empleados = ll_get(listaEmpleados,i);
+                    printf("Valor de i: %d\n",i);
+                    printf("%d %d",empleados[i].id, empleados[i].horasTrabajadas);
+                    printf("\n\n");
+                    system("pause");
+
+                }
+
+
+
+
         }
     }while(option != 10);
     return 0;
 }
+

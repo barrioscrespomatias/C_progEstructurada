@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include <string.h>
 
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
@@ -58,6 +59,49 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+    Employee*auxiliar;
+    Employee*auxiliar2;
+    Employee* auxiliar3;
+
+    auxiliar = employee_new();
+    auxiliar2= employee_new();
+    auxiliar3 = employee_new();
+
+
+
+    auxiliar->horasTrabajadas=100;
+    auxiliar->id = 1;
+    strcpy(auxiliar->nombre,"PEDRO");
+
+    employee_setId(auxiliar2,2);
+
+    auxiliar2->horasTrabajadas = 10;
+    strcpy(auxiliar2->nombre,"JUAN");
+    auxiliar2->id = 2;
+
+     auxiliar3->horasTrabajadas = 50;
+    strcpy(auxiliar3->nombre,"MARIA");
+    auxiliar3->id = 3;
+
+
+    ll_add(pArrayListEmployee,auxiliar);
+    ll_add(pArrayListEmployee,auxiliar2);
+    ll_add(pArrayListEmployee,auxiliar3);
+
+
+//    (auxiliar+0)->horasTrabajadas=100;
+//    (auxiliar+0)->id = 1;
+//    strcpy((auxiliar+0)->nombre,"PEDRO");
+//
+//    (auxiliar+1)->horasTrabajadas=10;
+//    strcpy((auxiliar+1)->nombre,"JUAN");
+//    (auxiliar+1)->id = 2;
+//
+//    int i;
+//    for(i=0;i<2;i++)
+//    {
+//        ll_add(pArrayListEmployee,auxiliar+i);
+//    }
 
     return 1;
 }
@@ -86,6 +130,13 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
     return 1;
 }
 
+//int controller_mostrarUnEmpleado(LinkedList*pArrayListEmployee)
+//{
+//    Employee empleado;
+//
+//    empleado = ll_get(pArrayListEmployee,0);
+//}
+
 /** \brief Listar empleados
  *
  * \param path char*
@@ -95,6 +146,45 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
+    Employee *empleado;
+//    Employee *empleado2;
+
+//    int i;
+//    char nombre[50];
+//    int id;
+//    int horas;
+
+
+
+//    empleado = ll_get(pArrayListEmployee,0);
+//    printf("%s %d %d\n",empleado->nombre,empleado->id,empleado->horasTrabajadas,&empleado);
+//
+//    empleado2 = ll_get(pArrayListEmployee,1);
+//    printf("%s %d %d Dir: %d\n",empleado2->nombre,empleado2->id,empleado2->horasTrabajadas,&empleado2);
+//
+
+
+
+
+
+//    for(i=0; i<2; i++);
+//
+//    {
+//        empleado = (Employee*) ll_get(pArrayListEmployee,i);
+//
+//        printf("%d %d\n",empleado[i].id,empleado[i].horasTrabajadas);
+//
+//
+////              printf("Error.\n");
+//
+//    }
+//
+//
+//
+
+
+    system("pause");
+
     return 1;
 }
 

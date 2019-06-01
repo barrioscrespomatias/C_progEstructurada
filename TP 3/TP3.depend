@@ -120,17 +120,18 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1559238151 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\controller.c
+1559415000 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+	<string.h>
 
 1559204620 c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\linkedlist.h
 
 1559204620 c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\employee.h
 
-1559222131 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\employee.c
+1559407176 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\employee.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -140,7 +141,7 @@
 
 1559204620 c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\controller.h
 
-1559236792 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\main.c
+1559414897 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -148,7 +149,7 @@
 	"Employee.h"
 	<string.h>
 
-1559237809 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\parser.c
+1559243229 source:c:\users\matu\desktop\primer cuatrimestre 2019\primercuatri_2019-master\tp 3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
