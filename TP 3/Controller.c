@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
 #include <string.h>
+#include "utn.h"
+
 
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
@@ -18,10 +21,10 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 
     FILE* pFile;
 
+    pFile = fopen(path,"r");
     if(pFile != NULL)
     {
-        pFile = fopen("data.csv", "r");
-
+        parser_EmployeeFromText(pFile,pArrayListEmployee);
     }
 
     else
@@ -29,8 +32,9 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
         printf("Error de apertura de archivo texto");
     }
 
+
+
     ///LLAMAR A LA FUNCION PARSEO TEXTO QUE SE ENCARGUE DE MOSTRAR.
-    parser_EmployeeFromText(pFile,pArrayListEmployee);
 
     fclose(pFile);
 
@@ -59,49 +63,86 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    Employee*auxiliar;
-    Employee*auxiliar2;
-    Employee* auxiliar3;
+    Employee *empleado;
 
-    auxiliar = employee_new();
-    auxiliar2= employee_new();
-    auxiliar3 = employee_new();
+    int id;
+    char nombre[50];
+    int sueldo;
+    int horas;
+    int existe;
 
-
-
-    auxiliar->horasTrabajadas=100;
-    auxiliar->id = 1;
-    strcpy(auxiliar->nombre,"PEDRO");
-
-    employee_setId(auxiliar2,2);
-
-    auxiliar2->horasTrabajadas = 10;
-    strcpy(auxiliar2->nombre,"JUAN");
-    auxiliar2->id = 2;
-
-     auxiliar3->horasTrabajadas = 50;
-    strcpy(auxiliar3->nombre,"MARIA");
-    auxiliar3->id = 3;
+    id = getValidInt("Ingrese Id: ");
 
 
-    ll_add(pArrayListEmployee,auxiliar);
-    ll_add(pArrayListEmployee,auxiliar2);
-    ll_add(pArrayListEmployee,auxiliar3);
 
-
-//    (auxiliar+0)->horasTrabajadas=100;
-//    (auxiliar+0)->id = 1;
-//    strcpy((auxiliar+0)->nombre,"PEDRO");
 //
-//    (auxiliar+1)->horasTrabajadas=10;
-//    strcpy((auxiliar+1)->nombre,"JUAN");
-//    (auxiliar+1)->id = 2;
+//    existe = findEmployee(listaEmpleados,pArrayListEmployee,&id);
 //
-//    int i;
-//    for(i=0;i<2;i++)
+//    if(existe!=1)
 //    {
-//        ll_add(pArrayListEmployee,auxiliar+i);
+//
+//        getValidStringLetras("Ingrese nombre: ","Error, ingrese solo letras.",nombre);
+//        printf("%s\n",nombre);
+//        horas = getValidInt("Ingrese horas trabajadas: ");
+//        printf("%d\n",horas);
+//        sueldo = getValidInt("Ingrese sueldo: ");
+//        printf("%d\n",sueldo);
+//        printf("%d\n",id);
+//
+//
+//        employee_setId(listaEmpleados,id);
+//        employee_setNombre(listaEmpleados,nombre);
+//        employee_setHorasTrabajadas(listaEmpleados,horas);
+//        employee_setSueldo(listaEmpleados,sueldo);
+//
+//        ll_add(pArrayListEmployee,listaEmpleados);
 //    }
+//
+//    else
+//    {
+//        printf("No se puede cargar\n");
+//    }
+
+    system("pause");
+
+
+
+
+
+    //HARDCODEO
+
+//    Employee*auxiliar;
+//    Employee*auxiliar2;
+//    Employee* auxiliar3;
+//
+//    auxiliar = employee_new();
+//    auxiliar2= employee_new();
+//    auxiliar3 = employee_new();
+//
+//
+//
+//    auxiliar->horasTrabajadas=50;
+//    auxiliar->id = 13;
+//    strcpy(auxiliar->nombre,"PEPE");
+//
+//
+//    auxiliar2->horasTrabajadas = 10;
+//    strcpy(auxiliar2->nombre,"JUAN");
+//    auxiliar2->id = 2;
+//
+//    auxiliar3->horasTrabajadas = 50;
+//    strcpy(auxiliar3->nombre,"MARIA");
+//    auxiliar3->id = 3;
+//
+//
+//    ll_add(pArrayListEmployee,auxiliar);
+//    ll_add(pArrayListEmployee,auxiliar2);
+//    ll_add(pArrayListEmployee,auxiliar3);
+
+
+
+
+
 
     return 1;
 }
@@ -146,44 +187,38 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
-    Employee *empleado;
-//    Employee *empleado2;
 
-//    int i;
-//    char nombre[50];
-//    int id;
-//    int horas;
+    Employee *empleados;
+    int i;
 
+    if(ll_len(pArrayListEmployee)== 0)
+    {
+        printf("No hay empleados para mostrar\n");
+        system("pause");
 
+    }
 
-//    empleado = ll_get(pArrayListEmployee,0);
-//    printf("%s %d %d\n",empleado->nombre,empleado->id,empleado->horasTrabajadas,&empleado);
-//
-//    empleado2 = ll_get(pArrayListEmployee,1);
-//    printf("%s %d %d Dir: %d\n",empleado2->nombre,empleado2->id,empleado2->horasTrabajadas,&empleado2);
-//
+    else
+    {
+        printf(" Id  |Nombre       |Horas|Sueldo    \n");
 
+        for(i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+            empleados = ll_get(pArrayListEmployee,i);
+            if(i%250==0 && i!=0)
+            {
+                system("pause");
+            }
 
-
-
-
-//    for(i=0; i<2; i++);
-//
-//    {
-//        empleado = (Employee*) ll_get(pArrayListEmployee,i);
-//
-//        printf("%d %d\n",empleado[i].id,empleado[i].horasTrabajadas);
-//
-//
-////              printf("Error.\n");
-//
-//    }
-//
-//
-//
+            printf("%5d|%13s|%5d|%10d\n",empleados->id, empleados->nombre, empleados->horasTrabajadas, empleados->sueldo);
 
 
-    system("pause");
+        }
+
+         system("pause");
+
+    }
+
 
     return 1;
 }
@@ -223,4 +258,6 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
     return 1;
 }
+
+
 

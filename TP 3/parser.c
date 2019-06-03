@@ -12,20 +12,25 @@
  */
 int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 {
+    Employee * auxiliar;
     char id[50], nombre[50], horas[50], sueldo[50];
 
 
     ///DESDE EL PARSER SOLO LOS TENGO CONVERTIR A MI TIPO DE DATO Y CARGARLO EN EL ARRAY DE EMPLEADOS.
 
     fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,sueldo);
-    printf("%-4s| %-15s| %-15s| %-13s\n",id,nombre,horas,sueldo);
+
 
     while(!feof(pFile))
     {
-        fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,sueldo);
-        printf("%-4s| %-15s| %-15s| %-13s\n",id,nombre,horas,sueldo);
-    }
 
+        fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,sueldo);
+        auxiliar = employee_newParametros(id, nombre,horas,sueldo);
+        ll_add(pArrayListEmployee,auxiliar);
+        printf("%d\n",auxiliar->id);
+//        printf("\nLEIDOS: %d\n",ll_len(pArrayListEmployee));
+    }
+    system("pause");
 
     return 1;
 }

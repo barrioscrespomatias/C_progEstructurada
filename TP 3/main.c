@@ -128,18 +128,22 @@ int main()
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
          system("cls");
-            printf("\tMENU PRINCIPAL\n\n");
-            printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto). \n");
-            printf("2. Cargar los datos de los empleados desde el archivo data.bin (modo binario). \n");
-            printf("3. Alta de empleado\n");
-            printf("4. Modificar datos de empleado\n");
-            printf("5. Baja de empleado\n");
-            printf("6. Listar empleados\n");
-            printf("7. Ordenar empleados\n");
-            printf("8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n");
-            printf("9. Guardar los datos de los empleados en el archivo data.bin (modo binario).\n");
-            printf("10. Salir\n");
+//            printf("\tMENU PRINCIPAL\n\n");
+//            printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto). \n");
+//            printf("2. Cargar los datos de los empleados desde el archivo data.bin (modo binario). \n");
+//            printf("3. Alta de empleado\n");
+//            printf("4. Modificar datos de empleado\n");
+//            printf("5. Baja de empleado\n");
+//            printf("6. Listar empleados\n");
+//            printf("7. Ordenar empleados\n");
+//            printf("8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n");
+//            printf("9. Guardar los datos de los empleados en el archivo data.bin (modo binario).\n");
+//            printf("10. Salir\n");
 
+                printf("\tMENU PRINCIPAL\n\n");
+            printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto). \n");
+           // printf("3. Alta de empleado\n");
+            printf("3. Listar empleados\n");
 
             printf("\n\nIngrese una opcion: ");
             scanf("%d",&option);
@@ -155,24 +159,11 @@ int main()
             case 3:
                 controller_ListEmployee(listaEmpleados);
                 break;
-            case 4:
-                printf("CANTIDAD: %d\n",ll_len(listaEmpleados));
-                system("pause");
-
-                Employee *empleados;
-                int i;
-                for(i=0; i<ll_len(listaEmpleados);i++)
-                {
-                    empleados = ll_get(listaEmpleados,i);
-                    printf("Valor de i: %d\n",i);
-                    printf("%d %d",empleados[i].id, empleados[i].horasTrabajadas);
-                    printf("\n\n");
-                    system("pause");
-
-                }
 
 
 
+
+        //LL_SORT LE PASO UNA FUNCION QUE HAGA LA COMPARACION: NADA MAS
 
         }
     }while(option != 10);

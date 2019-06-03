@@ -4,6 +4,7 @@
 #include "Controller.h"
 #include "Employee.h"
 #include <string.h>
+#include "utn.h"
 
 Employee* employee_new()
 {
@@ -11,16 +12,18 @@ Employee* employee_new()
     nuevoEmpleado = (Employee*)malloc(sizeof(Employee));
     return nuevoEmpleado;
 }
-//Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas)
-//{
-//    Employee * auxiliar;
-//    auxiliar = employee_new();
-//
-//    auxiliar->id = atoi(id);
-//    strcpy(auxiliar->nombre,nombre);
-//    auxiliar->horasTrabajadas = atoi(horasTrabajadas);
+Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas, char* sueldo)
+{
+    Employee * auxiliar;
+    auxiliar = employee_new();
 
-//}
+    auxiliar->id = atoi(id);
+    strcpy(auxiliar->nombre,nombre);
+    auxiliar->horasTrabajadas = atoi(horasTrabajadas);
+    auxiliar->sueldo = atoi(sueldo);
+
+    return auxiliar;
+}
 
 
 //void employee_delete();
@@ -171,5 +174,37 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
     return getSueldoOk;
 
+}
+
+///MIS FUNCIONES
+
+int findEmployee(Employee *listaEmpleados, LinkedList* pArrayList)
+{
+    int findOk = 0;
+    int i;
+    //HACER la funcion buscar empleado
+    for()
+
+
+//    int i;
+//    int findOk = 0;
+//    int idABuscar;
+//    idABuscar = getValidInt("Ingrese Id: \n");
+//
+//    for(i=0; i<ll_len(pArrayList);i++)
+//    {
+//       listaEmpleados = ll_get(pArrayList,i);
+//
+//       if(listaEmpleados->id == idABuscar && ll_len(pArrayList)>0)
+//       {
+//           findOk = 1;
+//           printf("%5d %10s\n",listaEmpleados->id,listaEmpleados->nombre);
+//           *idOk = idABuscar;
+//           system("pause");
+//           break;
+//       }
+//    }
+
+    return findOk;
 }
 
