@@ -180,8 +180,7 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
 int findEmployee(LinkedList* pArrayList, int *id)
 {
-    Employee *empleados;
-
+    Employee* empleado;
 
     int i;
     int encontrado = 0;
@@ -189,36 +188,21 @@ int findEmployee(LinkedList* pArrayList, int *id)
 
     for(i=0; i<largo;i++)
     {
-        if(empleados->id == *id)
+        empleado = ll_get(pArrayList,i);
+
+        if(empleado->id == *id)
         {
-            printf("Encontrado\n");
-            printf("%d %s \n",empleados->id, empleados->nombre);
+            printf("Encontrado\n\n");
+            printf("Id :%d Nombre: %s \n",empleado->id, empleado->nombre);
             encontrado = 1;
             break;
-        }
-        else
-        {
-            printf("no se encontro\n");
+            system("pause");
         }
     }
-    system("pause");
 
 
 
 
-//    for(i=0; i<ll_len(pArrayList); i++)
-//    {
-//        listaEmpleados = ll_get(pArrayList,i);
-//
-//        if(listaEmpleados->id == id && ll_len(pArrayList)>0)
-//        {
-//            findOk = 1;
-//
-//            break;
-//        }
-//
-//    }
-//
 return encontrado;
 }
 

@@ -61,78 +61,66 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-//int controller_addEmployee(LinkedList* pArrayListEmployee)
-//{
-//    Employee *empleado;
-//    empleado = employee_new();
-//
-//
-//    int id;
-//    int existe;
-////    char nombre[50];
-////    int sueldo;
-////    int horas;
-////    int existe;
-//
-//    id = getValidInt("Ingrese Id: ");
-////    printf("%d",id);
-//    existe = findEmployee(empleado,pArrayListEmployee,id);
-//
-//    if(existe == 1)
-//    {
-//
-//        printf("Ya existe un empleado con ese id!!\n");
-//    }
-//
-//    else
-//    {
-//        employee_setId()
-//    }
-//
-//    system("pause");
-//
-//
-//
-//
+int controller_addEmployee(LinkedList* pArrayListEmployee)
+{
 
 
-    //HARDCODEO
-
-//    Employee*auxiliar;
-//    Employee*auxiliar2;
-//    Employee* auxiliar3;
-//
-//    auxiliar = employee_new();
-//    auxiliar2= employee_new();
-//    auxiliar3 = employee_new();
-//
-//
-//
-//    auxiliar->horasTrabajadas=50;
-//    auxiliar->id = 13;
-//    strcpy(auxiliar->nombre,"PEPE");
-//
-//
-//    auxiliar2->horasTrabajadas = 10;
-//    strcpy(auxiliar2->nombre,"JUAN");
-//    auxiliar2->id = 2;
-//
-//    auxiliar3->horasTrabajadas = 50;
-//    strcpy(auxiliar3->nombre,"MARIA");
-//    auxiliar3->id = 3;
-//
-//
-//    ll_add(pArrayListEmployee,auxiliar);
-//    ll_add(pArrayListEmployee,auxiliar2);
-//    ll_add(pArrayListEmployee,auxiliar3);
+    Employee *empleado;
 
 
+    int addOk = 0;
+    int id;
+    char buffer[100];
+    int horas;
+    int sueldo;
+
+    int esta;
+
+    id = getValidInt("Ingrese Id: ");
+    esta = findEmployee(pArrayListEmployee,&id);
+    if(esta == 1)
+    {
+        printf("Se ha encontrado un empleado con el id %d\n",id);
 
 
+    }
+    else
+    {
+
+        getValidStringLetras("Ingrese nombre: ","Error. Solo puede ingresar letras.",buffer);
+        horas=getValidInt("Ingrese horas trabajadas: ");
+        sueldo=getValidInt("Ingrese sueldo: ");
 
 
-//    return 1;
-//}
+//        employee_setId(empleado,id);        printf("ACA= OK");
+//
+//        employee_setNombre(empleado,buffer);
+//        employee_setHorasTrabajadas(empleado,horas);
+//        employee_setSueldo(empleado,sueldo);
+
+
+        printf("Voy a cargar:\n%d %s %d %d\n\n",id,buffer,horas,sueldo);
+        system("pause");
+
+        ///FALLA AL CARGAR LOS EMPLEADOS
+
+//        empleado->id = id;
+//        strcpy(empleado->nombre,buffer);
+//        empleado->horasTrabajadas = horas;
+//        empleado->sueldo = sueldo;
+
+        system("pause");
+        ll_add(pArrayListEmployee,empleado);
+        addOk = 1;
+        printf("Empleado cargado correctamente\n");
+
+
+    }
+
+    system("pause");
+
+    return addOk;
+}
 
 /** \brief Modificar datos de empleado
  *
@@ -202,7 +190,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 
         }
 
-         system("pause");
+        system("pause");
 
     }
 

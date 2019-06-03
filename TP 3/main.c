@@ -125,6 +125,7 @@ int main()
 
 
     int option = 0;
+    int controlador = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
          system("cls");
@@ -154,7 +155,8 @@ int main()
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
             case 2:
-               findEmployee(listaEmpleados,10);
+               controller_addEmployee(listaEmpleados);
+
                 break;
             case 3:
                 controller_ListEmployee(listaEmpleados);
