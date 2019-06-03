@@ -178,33 +178,47 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
 ///MIS FUNCIONES
 
-int findEmployee(Employee *listaEmpleados, LinkedList* pArrayList)
+int findEmployee(LinkedList* pArrayList, int *id)
 {
-    int findOk = 0;
+    Employee *empleados;
+
+
     int i;
-    //HACER la funcion buscar empleado
-    for()
+    int encontrado = 0;
+    int largo = ll_len(pArrayList);
+
+    for(i=0; i<largo;i++)
+    {
+        if(empleados->id == *id)
+        {
+            printf("Encontrado\n");
+            printf("%d %s \n",empleados->id, empleados->nombre);
+            encontrado = 1;
+            break;
+        }
+        else
+        {
+            printf("no se encontro\n");
+        }
+    }
+    system("pause");
 
 
-//    int i;
-//    int findOk = 0;
-//    int idABuscar;
-//    idABuscar = getValidInt("Ingrese Id: \n");
-//
-//    for(i=0; i<ll_len(pArrayList);i++)
+
+
+//    for(i=0; i<ll_len(pArrayList); i++)
 //    {
-//       listaEmpleados = ll_get(pArrayList,i);
+//        listaEmpleados = ll_get(pArrayList,i);
 //
-//       if(listaEmpleados->id == idABuscar && ll_len(pArrayList)>0)
-//       {
-//           findOk = 1;
-//           printf("%5d %10s\n",listaEmpleados->id,listaEmpleados->nombre);
-//           *idOk = idABuscar;
-//           system("pause");
-//           break;
-//       }
+//        if(listaEmpleados->id == id && ll_len(pArrayList)>0)
+//        {
+//            findOk = 1;
+//
+//            break;
+//        }
+//
 //    }
-
-    return findOk;
+//
+return encontrado;
 }
 

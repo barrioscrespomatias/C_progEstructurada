@@ -154,7 +154,7 @@ int main()
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
             case 2:
-                controller_addEmployee(listaEmpleados);
+               findEmployee(listaEmpleados,10);
                 break;
             case 3:
                 controller_ListEmployee(listaEmpleados);
