@@ -25,7 +25,7 @@ int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
 
 //MIS FUNCIONES
-int findEmployee(LinkedList* pArrayList, int *id);
+int findEmployee(LinkedList* pArrayList, int *id, int*indice);
 
 
 

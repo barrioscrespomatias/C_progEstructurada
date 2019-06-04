@@ -178,8 +178,10 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
 ///MIS FUNCIONES
 
-int findEmployee(LinkedList* pArrayList, int *id)
+int findEmployee(LinkedList* pArrayList, int *id, int*indice)
 {
+
+    ///NECESITO EL INDICE PARA ELIMINAR
     Employee* empleado;
 
     int i;
@@ -192,9 +194,9 @@ int findEmployee(LinkedList* pArrayList, int *id)
 
         if(empleado->id == *id)
         {
-            printf("Encontrado\n\n");
-            printf("Id :%d Nombre: %s \n",empleado->id, empleado->nombre);
+            printf("Se ha encontrado una coincidencia!!\n\nId :%d Nombre: %s \n",empleado->id, empleado->nombre);
             encontrado = 1;
+            indice = i;
             break;
             system("pause");
         }

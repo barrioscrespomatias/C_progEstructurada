@@ -66,6 +66,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 
 
     Employee *empleado;
+    empleado = employee_new();
 
 
     int addOk = 0;
@@ -73,14 +74,15 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     char buffer[100];
     int horas;
     int sueldo;
+    int indice;
 
     int esta;
 
     id = getValidInt("Ingrese Id: ");
-    esta = findEmployee(pArrayListEmployee,&id);
+    esta = findEmployee(pArrayListEmployee,&id,&indice);
     if(esta == 1)
     {
-        printf("Se ha encontrado un empleado con el id %d\n",id);
+        printf("Se ha encontrado un empleado con el id %d\nNo se pudo cargar el nuevo empleado\n",id);
 
 
     }
@@ -91,30 +93,14 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
         horas=getValidInt("Ingrese horas trabajadas: ");
         sueldo=getValidInt("Ingrese sueldo: ");
 
+        employee_setId(empleado,id);
+        employee_setNombre(empleado,buffer);
+        employee_setHorasTrabajadas(empleado,horas);
+        employee_setSueldo(empleado,sueldo);
 
-//        employee_setId(empleado,id);        printf("ACA= OK");
-//
-//        employee_setNombre(empleado,buffer);
-//        employee_setHorasTrabajadas(empleado,horas);
-//        employee_setSueldo(empleado,sueldo);
-
-
-        printf("Voy a cargar:\n%d %s %d %d\n\n",id,buffer,horas,sueldo);
-        system("pause");
-
-        ///FALLA AL CARGAR LOS EMPLEADOS
-
-//        empleado->id = id;
-//        strcpy(empleado->nombre,buffer);
-//        empleado->horasTrabajadas = horas;
-//        empleado->sueldo = sueldo;
-
-        system("pause");
         ll_add(pArrayListEmployee,empleado);
         addOk = 1;
         printf("Empleado cargado correctamente\n");
-
-
     }
 
     system("pause");
@@ -143,6 +129,36 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
+
+    ///NECESITO EL INDICE DE FINDEMPLOYEE PARA ELIMINAR
+    int idDelete;
+    int existe;
+    char confirma;
+    int indice;
+
+    idDelete = getValidInt("Ingrese Id del empleado a eliminar: ");
+    existe = findEmployee(pArrayListEmployee,&idDelete,&indice);
+    indice = &indice;
+    printf("ENCONTRADO EN LA POSICION %d\n\n",indice);
+
+
+    if(existe!=1)
+    {
+        printf("No existe un empleado con el Id cargado\n");
+    }
+    else
+    {
+
+        confirma = getValidCharSN("¿Realmente desea Borrar al empleado? ");
+        if(confirma == 'S' || confirma == 'S')
+        {
+            ll_remove(pArrayListEmployee,indice);
+        }
+
+    }
+
+    system("pause");
+
     return 1;
 }
 
