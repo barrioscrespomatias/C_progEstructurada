@@ -57,70 +57,39 @@ static Node* getNode(LinkedList* this, int nodeIndex)
 
     Node* pNode = NULL;
 
+
     int i;
-//    printf("1\n");
-//    printf("%d\n",ll_len(this));
-//    system("pause");
 
 
 
-    if(this!= NULL && ll_len(this)>0 && nodeIndex <=ll_len(this)&& nodeIndex>0)
+    if(this!= NULL)
     {
-//        for(i=0; i<ll_len(this) ; i++)
-//        {
-//                printf("2\n");
-        for(i=0; i<ll_len(this); i++)
+        if(nodeIndex>=0 && nodeIndex <ll_len(this))
         {
-            if(nodeIndex == this->size)
+            pNode = this->pFirstNode;
+
+            for(i=0; i<ll_len(this); i++)
             {
-                printf("Entra\n");
-                printf("NODE INDEX: %d\n",nodeIndex);
-                printf("SIZE : %d\n",this->size);
+                if(i == nodeIndex)
+                {
 
+                    break;
+                }
 
-//                pNode = this->pFirstNode;
-            }
+                else
 
-            else
+                {
+                    pNode = pNode->pNextNode;
 
-            {
-                printf("SIZE : %d\n",this->size);
-                printf("NODE INDEX: %d\n",nodeIndex);
-
-                printf("No es igual a NODE INDEX\n");
-
-//                this->pFirstNode = pNode->pNextNode;
+                }
 
             }
-
-//            printf("Size: %d\n",this->size);
-//            system("pause");
-////            this->size ++;
-//            printf("Size: %d\n",this->size);
 
         }
 
-//        }
     }
 
-
-//    int i;
-//
-//    if(this!= NULL && nodeIndex>0 && nodeIndex<ll_len(this))
-//    {
-//        for(i = 0; i<ll_len(this); i++)
-//        {
-//            this->size = 0;
-//            if(nodeIndex == this->size)
-//            {
-//                pNode = pNode->pElement;
-//                break;
-//            }
-//            this->size++;
-//        }
-//    }
     return pNode;
-
 
 }
 
