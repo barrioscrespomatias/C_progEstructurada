@@ -119,13 +119,40 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
+    Node *pNode = NULL;
 
-    if(this!= NULL && nodeIndex>0 &&nodeIndex<ll_len(this))
+
+
+    int i;
+
+
+
+    if(this!= NULL && nodeIndex>=0 && nodeIndex <=ll_len(this))
     {
-        returnAux = 0;
+//            printf("ACA OK\n");
+//            system("pause");
+            pNode->pElement = pElement;
+            this->pFirstNode =   pNode->pElement;
+
+        for(i=0; i<nodeIndex; i++)
+        {
+
+
+            break;
+
+//                this->pFirstNode = pNode;
+//                break;
+        }
+
+        else
+        {
+            printf("LALA\n");
+
+        }
     }
 
-    return returnAux;
+
+return returnAux;
 }
 
 
@@ -154,6 +181,27 @@ int test_addNode(LinkedList* this, int nodeIndex,void* pElement)
 int ll_add(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
+
+    if(this!= NULL)
+    {
+        actual = this->pFirstNode;
+    }
+
+
+    while(actual != NULL)
+
+    {
+        actual = actual ->pnextNode;
+        indice ++;
+    }
+
+    ///if(!addNODE)
+
+    ///LLAMO A FUNCION ADD NODE;
+
+
+    retorno = 0;
+//    for(i = 0 ; i<)
 
     return returnAux;
 }
