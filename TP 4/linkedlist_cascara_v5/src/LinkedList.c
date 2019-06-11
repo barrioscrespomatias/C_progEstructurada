@@ -281,6 +281,37 @@ int ll_set(LinkedList* this, int index,void* pElement)
 int ll_remove(LinkedList* this,int index)
 {
     int returnAux = -1;
+    Node* pNodeAeliminar = NULL;
+    Node* pNodeAnterior = NULL;
+
+    pNodeAeliminar = (Node*) malloc(sizeof(Node));
+    pNodeAnterior = (Node*) malloc(sizeof(Node));
+
+
+
+    if(this!= NULL && index>= 0 && index<ll_len(this))
+    {
+        pNodeAeliminar = getNode(this,index);
+
+        if(index == 0)
+        {
+            this->pFirstNode = pNodeAeliminar->pNextNode;
+            this->size--;
+
+            returnAux = 0;
+
+        }
+
+        else
+        {
+            pNodeAnterior = getNode(this,index-1);
+            pNodeAnterior->pNextNode = pNodeAeliminar->pNextNode;
+            this->size--;
+            returnAux = 0;
+
+        }
+        returnAux = 0;
+    }
 
     return returnAux;
 }
@@ -293,9 +324,18 @@ int ll_remove(LinkedList* this,int index)
                         ( 0) Si funciono correctamente
  *
  */
+
 int ll_clear(LinkedList* this)
 {
     int returnAux = -1;
+
+    if(this!=NULL)
+    {
+        this->pFirstNode = NULL;
+        this->size= 0;
+
+        returnAux = 0;
+    }
 
     return returnAux;
 }
@@ -311,6 +351,14 @@ int ll_clear(LinkedList* this)
 int ll_deleteLinkedList(LinkedList* this)
 {
     int returnAux = -1;
+
+    if(this!= NULL)
+    {
+        ll_clear(this);
+        this = NULL;
+
+        returnAux = 0;
+    }
 
     return returnAux;
 }
