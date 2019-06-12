@@ -131,7 +131,7 @@ static int addNode(LinkedList* this, int nodeIndex,void* pElement)
     {
         ///OBTENGO EL NODO ANTERIOR
         /// GET NODE YA TIENE UN FOR. ME DEYVUELVE EL NODO
-        pNodeAnterior = getNode(this,nodeIndex-1);
+//        pNodeAnterior = getNode(this,nodeIndex-1);
 
         /// INICIO DE LA LISTA
         if(nodeIndex == 0)
@@ -383,7 +383,7 @@ int ll_indexOf(LinkedList* this, void* pElement)
 
     {
 
-        for(i=0; i<ll_len(this);i++)
+        for(i=0; i<ll_len(this); i++)
         {
             pNodeAuxiliar = getNode(this,i);
             if(pElement == pNodeAuxiliar->pElement)
@@ -442,6 +442,39 @@ int ll_isEmpty(LinkedList* this)
 int ll_push(LinkedList* this, int index, void* pElement)
 {
     int returnAux = -1;
+//    Node* nodoAnterior = NULL;
+//    Node*nodoNuevo = NULL;
+//
+//    nodoAnterior = (Node*) malloc(sizeof(Node));
+//    nodoNuevo = (Node*) malloc(sizeof(Node));
+//
+//
+//    if(this!= NULL && index>=0 && index < ll_len(this))
+//    {
+//        if(this->size == 0)
+//        {
+//            nodoNuevo->pNextNode = this->pFirstNode;
+//            this->pFirstNode = nodoNuevo;
+//            this->size ++;
+//            returnAux = 0;
+//
+//        }
+//
+//        else
+//        {
+//            nodoAnterior = getNode(this,index-1);
+//
+//            nodoNuevo->pNextNode=nodoAnterior->pNextNode;
+//            nodoAnterior->pNextNode = nodoNuevo;
+//            this->size++;
+//            returnAux=0;
+//        }
+//
+//        nodoNuevo->pElement = pElement;
+//
+//
+
+//    }
 
     return returnAux;
 }
@@ -455,9 +488,26 @@ int ll_push(LinkedList* this, int index, void* pElement)
                             (pElement) Si funciono correctamente
  *
  */
-void* ll_pop(LinkedList* this,int index)
+void* ll_pop(LinkedList* this, int indice)
 {
     void* returnAux = NULL;
+    Node *nodoAEliminar;
+    int i ;
+
+    if(this!= NULL && indice >= 0 && indice <ll_len(this))
+    {
+        nodoAEliminar = getNode(this,indice);
+
+        for(i=0; i<indice; i++)
+        {
+            ///TOMO EL ELEMENTO
+            returnAux = nodoAEliminar->pElement;
+        }
+
+        ///ELIMINO EL ELEMENTO DE LA LISTA
+        /// BAJO UNO AL SIZE
+    }
+
 
     return returnAux;
 }
