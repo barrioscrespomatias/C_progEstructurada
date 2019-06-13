@@ -491,21 +491,13 @@ int ll_push(LinkedList* this, int index, void* pElement)
 void* ll_pop(LinkedList* this, int indice)
 {
     void* returnAux = NULL;
-    Node *nodoAEliminar;
-    int i ;
+    Node *nodoAEliminar = NULL;
 
     if(this!= NULL && indice >= 0 && indice <ll_len(this))
     {
         nodoAEliminar = getNode(this,indice);
-
-        for(i=0; i<indice; i++)
-        {
-            ///TOMO EL ELEMENTO
-            returnAux = nodoAEliminar->pElement;
-        }
-
-        ///ELIMINO EL ELEMENTO DE LA LISTA
-        /// BAJO UNO AL SIZE
+        returnAux = nodoAEliminar->pElement;
+        ll_remove(this,indice);
     }
 
 
@@ -524,6 +516,22 @@ void* ll_pop(LinkedList* this, int indice)
 int ll_contains(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
+    int existe;
+
+
+    if(this!= NULL)
+    {
+        existe = ll_indexOf(this,pElement);
+
+        if(existe == -1)
+        {
+            returnAux = 0;
+        }
+        else
+        {
+            returnAux = 1;
+        }
+    }
 
     return returnAux;
 }
@@ -540,6 +548,35 @@ int ll_contains(LinkedList* this, void* pElement)
 int ll_containsAll(LinkedList* this,LinkedList* this2)
 {
     int returnAux = -1;
+    int i, existe;
+    Node* aComparar = NULL;
+
+
+    ///ERROR AL RETORNAR
+
+    if(this!= NULL && this2 != NULL)
+    {
+        for(i= 0; i<ll_len(this2); i++)
+        {
+            aComparar = getNode(this2,i);
+
+            existe = ll_contains(this,aComparar->pElement);
+            if(existe != 1)
+            {
+                returnAux = 0;
+                break;
+            }
+
+            if(existe == 1)
+            {
+                returnAux = 1;
+
+            }
+
+
+        }
+
+    }
 
     return returnAux;
 }
