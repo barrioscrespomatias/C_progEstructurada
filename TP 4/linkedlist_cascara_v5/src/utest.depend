@@ -245,7 +245,7 @@
 	<string.h>
 	"../inc/LinkedList.h"
 
-1560279808 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\addnodetest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\addnodetest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -253,34 +253,34 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\utest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\utest.h
 
-1560279807 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\inc\linkedlist.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\inc\linkedlist.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\employee.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\employee.h
 
-1560279808 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\employee.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../inc/Employee.h"
 
-1560279807 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\src\linkedlist.c
+1560405590 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\src\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../inc/LinkedList.h"
 
-1560295731 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\src\main.c
+1560396751 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../testing/inc/main_test.h"
 	"../inc/LinkedList.h"
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\main_test.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\main_test.h
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\addtest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\addtest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -288,7 +288,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\cleartest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\cleartest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -296,7 +296,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\clonetest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\clonetest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -304,7 +304,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\containsalltest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\containsalltest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -312,7 +312,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\containstest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\containstest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -320,7 +320,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\deletelinkedlisttest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\deletelinkedlisttest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -328,7 +328,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\getnodetest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\getnodetest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -336,7 +336,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\gettest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\gettest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -344,7 +344,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\indexoftest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\indexoftest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -352,7 +352,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\isemptytest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\isemptytest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -360,7 +360,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\lentest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\lentest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -368,7 +368,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\main_test.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\main_test.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -392,60 +392,52 @@
 	"../inc/containsAllTest.h"
 	"../inc/sortTest.h"
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\newtest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\newtest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\addtest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\addtest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\getnodetest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\getnodetest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\addnodetest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\addnodetest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\deletelinkedlisttest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\deletelinkedlisttest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\lentest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\lentest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\gettest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\gettest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\containstest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\containstest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\settest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\settest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\removetest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\removetest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\cleartest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\cleartest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\clonetest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\clonetest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\pushtest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\pushtest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\indexoftest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\indexoftest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\isemptytest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\isemptytest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\poptest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\poptest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\sublisttest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\sublisttest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\containsalltest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\containsalltest.h
 
-1560279808 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\sorttest.h
+1560371794 c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\inc\sorttest.h
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\newtest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\newtest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../../inc/LinkedList.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\poptest.c
-	"../../testing/utest.h"
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"../../inc/LinkedList.h"
-	"../../testing/inc/Employee.h"
-
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\pushtest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\poptest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -453,7 +445,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\removetest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\pushtest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -461,7 +453,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\settest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\removetest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -469,7 +461,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\sorttest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\settest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -477,7 +469,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\sublisttest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\sorttest.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -485,7 +477,15 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1560279809 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\utest.c
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1560371794 source:c:\users\matias\desktop\primercuatri_2019\tp 4\linkedlist_cascara_v5\testing\utest.c
 	"utest.h"
 	<stdio.h>
 	<stdlib.h>

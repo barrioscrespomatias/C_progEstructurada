@@ -548,34 +548,26 @@ int ll_contains(LinkedList* this, void* pElement)
 int ll_containsAll(LinkedList* this,LinkedList* this2)
 {
     int returnAux = -1;
-    int i, existe;
+    int i, j, existe;
+
     Node* aComparar = NULL;
+    aComparar = (Node*)malloc(sizeof(Node));
 
 
-    ///ERROR AL RETORNAR
-
-    if(this!= NULL && this2 != NULL)
+    if(this!= NULL && this2 != NULL)//||
     {
         for(i= 0; i<ll_len(this2); i++)
         {
             aComparar = getNode(this2,i);
-
             existe = ll_contains(this,aComparar->pElement);
             if(existe != 1)
             {
-                returnAux = 0;
-                break;
+                ///No puedo poner un return.
+                ///PROBAR CON WHILE
+                return returnAux = 0;
             }
-
-            if(existe == 1)
-            {
-                returnAux = 1;
-
-            }
-
-
         }
-
+        returnAux = 1;
     }
 
     return returnAux;
@@ -594,6 +586,28 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
 LinkedList* ll_subList(LinkedList* this,int from,int to)
 {
     LinkedList* cloneArray = NULL;
+    Node*pNode;
+    int i;
+    int j=0;
+
+    if(this!= NULL && from>=0 && to< ll_len(this) && to>= from)
+    {
+
+       for(i=0; i<ll_len(this); i++)
+        {
+            if(i >=from && i<=to)
+            {
+            pNode = getNode(this,i);
+            addNode(cloneArray,i,pNode->pElement);
+
+
+
+
+
+            }
+        }
+
+    }
 
     return cloneArray;
 }
