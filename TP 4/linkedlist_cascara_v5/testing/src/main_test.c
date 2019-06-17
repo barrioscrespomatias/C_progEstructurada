@@ -205,9 +205,9 @@ void startTesting(int testGroup)
             utest_printStartTesting("ll_subList()");
             utest_init();
             utest_startTest(subListTestCase01,subListTestSetup,">Caso [Verifica retorno con parametros correctos]");
-//            utest_startTest(subListTestCase02,subListTestSetup,">Caso [Verifica si los elementos de la sub lista son correctos]");
-//            utest_startTest(subListTestCase03,subListTestSetup,">Caso [Intenta generar sublistas con parametros fuera del indice]");
-//            utest_startTest(subListTestCase04,subListTestSetup,">Caso [Intenta crear una sublista pasando una lista NULL]");
+            utest_startTest(subListTestCase02,subListTestSetup,">Caso [Verifica si los elementos de la sub lista son correctos]");
+            utest_startTest(subListTestCase03,subListTestSetup,">Caso [Intenta generar sublistas con parametros fuera del indice]");
+            utest_startTest(subListTestCase04,subListTestSetup,">Caso [Intenta crear una sublista pasando una lista NULL]");
             utest_printStatistics("ll_subList()");
             break;
 

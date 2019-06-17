@@ -595,36 +595,21 @@ LinkedList* ll_subList(LinkedList* this,int from,int to)
     ///PRIMER TEST PASA COMO PARAMETRO:
     ///ll_subList(list,0,1)
 
-    if(this!= NULL && from>=0 && to<=ll_len(this) && to>= from)
+    if(this!= NULL && from>=0 && from<ll_len(this) && to<ll_len(this) && to>= from)
     {
-        printf("No ingresa\n");
         cloneArray = ll_newLinkedList();
-//        printf("Cantidad CLONE antes for: %d\n",ll_len(cloneArray));
-
-//        if(cloneArray!= NULL)
-//        {
+        if(cloneArray!= NULL)
+        {
             for(i=from; i<=to; i++)
             {
                 pNode = getNode(this,i);
                 ll_add(cloneArray,pNode->pElement);
-                printf("I es igual a: %d\n",i);
-
-//            printf("Clone array: %d\n",ll_len(cloneArray));
             }
-                                        printf("ROMPE\n");
 
-
-//            printf("Dir clone despues for %d\n",cloneArray);
-            printf("Cantidad CLONE despues for: %d\n",ll_len(cloneArray));
-//            return cloneArray;
-//        }
-
-
+        }
 
     }
 
-//    printf("Dir afuera for %d\n",cloneArray);
-//    printf("Cantidad CLONE afuera del for: %d\n",ll_len(cloneArray));
 
     return cloneArray;
 }
