@@ -595,11 +595,11 @@ LinkedList* ll_subList(LinkedList* this,int from,int to)
     {
         cloneArray = ll_newLinkedList();
 
-            for(i=from; i<to; i++)
-            {
-                pNode = getNode(this,i);
-                ll_add(cloneArray,pNode->pElement);
-            }
+        for(i=from; i<to; i++)
+        {
+            pNode = getNode(this,i);
+            ll_add(cloneArray,pNode->pElement);
+        }
 
     }
 
@@ -646,31 +646,43 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
     Node* pNodeB = NULL;
     Node* pNodeAuxiliar = NULL;
 
+    int (*ptr_funcion)(void*,void*);
+    ptr_funcion = pFunc;
+
     int i, j;
 
-    if(this!= NULL)
+    if(this!= NULL && pFunc!= NULL)
     {
-        for(i=0; i<ll_len(this)-1;i++)
+        for(i=0; i<ll_len(this)-1; i++)
         {
+            pNodeA = getNode(this,i);
+
             for(j=i+1; j<ll_len(this); j++)
             {
+                pNodeB = getNode(this,j);
 
-                ///La funcion debe recibir los paratros de punteros.
-                /// tengo que hacer un get de la funcion.
-               //if(*pFunc)
+                if(ptr_funcion == 1 || ptr_funcion == 0 || ptr_funcion == -1)
+
+                    ///La funcion debe recibir los paratros de punteros.
+                    /// tengo que hacer un get de la funcion.
+                    /// Ademas falta contemplar el orden
+                    //if(*pFunc)
                 {
                     pNodeA = pNodeB;
                     pNodeB = pNodeAuxiliar;
                     pNodeAuxiliar = pNodeA;
                     returnAux = 0;
                 }
-                else
-                {
 
-                }
+//                else if(ptr_funcion==0)
+//                {
+//                    pNodeA = pNodeB;
+//                    pNodeB = pNodeAuxiliar;
+//                    pNodeAuxiliar = pNodeA;
+//                    returnAux = 0;
+//                }
             }
         }
-
     }
 
     return returnAux;
