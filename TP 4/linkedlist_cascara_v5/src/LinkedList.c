@@ -619,9 +619,11 @@ LinkedList* ll_subList(LinkedList* this,int from,int to)
 LinkedList* ll_clone(LinkedList* this)
 {
     LinkedList* cloneArray = NULL;
+    int cantidad = ll_len(this);
 
     if(this!= NULL)
     {
+        cloneArray = ll_subList(this,0,cantidad);
 
     }
 
@@ -638,7 +640,38 @@ LinkedList* ll_clone(LinkedList* this)
  */
 int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 {
-    int returnAux =-1;
+    int returnAux = -1;
+
+    Node* pNodeA = NULL;
+    Node* pNodeB = NULL;
+    Node* pNodeAuxiliar = NULL;
+
+    int i, j;
+
+    if(this!= NULL)
+    {
+        for(i=0; i<ll_len(this)-1;i++)
+        {
+            for(j=i+1; j<ll_len(this); j++)
+            {
+
+                ///La funcion debe recibir los paratros de punteros.
+                /// tengo que hacer un get de la funcion.
+               //if(*pFunc)
+                {
+                    pNodeA = pNodeB;
+                    pNodeB = pNodeAuxiliar;
+                    pNodeAuxiliar = pNodeA;
+                    returnAux = 0;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+    }
 
     return returnAux;
 
