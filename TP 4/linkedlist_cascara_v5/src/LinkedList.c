@@ -586,29 +586,23 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
 LinkedList* ll_subList(LinkedList* this,int from,int to)
 {
     LinkedList* cloneArray = NULL;
-//    printf("Dir stack %d\n",cloneArray);
-
     Node*pNode;
+
 
     int i;
 
-    ///PRIMER TEST PASA COMO PARAMETRO:
-    ///ll_subList(list,0,1)
-
-    if(this!= NULL && from>=0 && from<ll_len(this) && to<ll_len(this) && to>= from)
+    if(this!= NULL && from>=0 && from<ll_len(this) && to<=ll_len(this) && to>= from)
     {
         cloneArray = ll_newLinkedList();
-        if(cloneArray!= NULL)
-        {
-            for(i=from; i<=to; i++)
+
+            for(i=from; i<to; i++)
             {
                 pNode = getNode(this,i);
                 ll_add(cloneArray,pNode->pElement);
             }
 
-        }
-
     }
+
 
 
     return cloneArray;
