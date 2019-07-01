@@ -196,15 +196,76 @@ int findEmployee(LinkedList* pArrayList, int *id, int*indice)
         {
             printf("Se ha encontrado una coincidencia!!\n\nId :%d Nombre: %s \n",empleado->id, empleado->nombre);
             encontrado = 1;
-            indice = i;
+            *indice = i;
             break;
             system("pause");
         }
     }
 
-
-
-
 return encontrado;
 }
+
+
+
+
+
+
+int employeeSortById(void * empleadoA, void * empleadoB)
+{
+    int retorno = 0;
+
+    if(  ((Employee*)empleadoA)->id > ((Employee*)empleadoB)->id  )
+    {
+        retorno = 1;
+    }
+
+    return retorno;
+}
+
+
+int employeeSortByName(void * empleadoA, void * empleadoB)
+
+{
+
+    int retorno = 0;
+
+    if(strcmp(((Employee*)empleadoA)->nombre, ((Employee*)empleadoB)->nombre)>0)
+    {
+        retorno = 1;
+    }
+
+    return retorno;
+}
+
+
+int employeeSortByHorasTrabajadas(void * empleadoA, void * empleadoB)
+{
+    int retorno = 0;
+
+    if(  ((Employee*)empleadoA)->horasTrabajadas > ((Employee*)empleadoB)->horasTrabajadas  )
+    {
+        retorno = 1;
+    }
+
+    return retorno;
+}
+
+
+int employeeSortBySueldo(void * empleadoA, void * empleadoB)
+{
+    int retorno = 0;
+
+    if(  ((Employee*)empleadoA)->sueldo > ((Employee*)empleadoB)->sueldo  )
+    {
+        retorno = 1;
+    }
+
+    return retorno;
+}
+
+
+
+
+
+
 

@@ -139,7 +139,6 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
     idDelete = getValidInt("Ingrese Id del empleado a eliminar: ");
     existe = findEmployee(pArrayListEmployee,&idDelete,&indice);
     indice = &indice;
-    printf("ENCONTRADO EN LA POSICION %d\n\n",indice);
 
 
     if(existe!=1)
@@ -150,7 +149,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
     {
 
         confirma = getValidCharSN("¿Realmente desea Borrar al empleado? ");
-        if(confirma == 'S' || confirma == 'S')
+        if(confirma == 'S' || confirma == 's')
         {
             ll_remove(pArrayListEmployee,indice);
         }
@@ -223,6 +222,35 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
+    int opcion = 0;
+
+    opcion = getValidInt("Menu ordenar empleados\n\n1. Id\n2. Nombre\n3. Horas trabajadas\n4. Sueldo\n\nSeleccione una opcion\n");
+
+    switch(opcion)
+    {
+    case 1:
+        ll_sort(pArrayListEmployee,employeeSortById,1);
+        printf("Empleados ordenados por Id correctamente\n");
+        system("pause");
+        break;
+    case 2:
+        ll_sort(pArrayListEmployee,employeeSortByName,1);
+        printf("Empleados ordenados por Nombre correctamente\n");
+        system("pause");
+        break;
+
+    case 3:
+        ll_sort(pArrayListEmployee,employeeSortByHorasTrabajadas,1);
+        printf("Empleados ordenados por Horas correctamente\n");
+        system("pause");
+        break;
+    case 4:
+        ll_sort(pArrayListEmployee,employeeSortBySueldo,1);
+        printf("Empleados ordenados por Sueldo correctamente\n");
+        system("pause");
+        break;
+    }
+
     return 1;
 }
 

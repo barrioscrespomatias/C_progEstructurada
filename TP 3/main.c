@@ -149,6 +149,8 @@ int main()
         printf("2. Agregar empleado\n");
         printf("3. Listar empleados\n");
         printf("4. Borrar empleado\n");
+        printf("5. Ordenar empleados\n");
+
 
 
         printf("\n\nIngrese una opcion: ");
@@ -168,6 +170,10 @@ int main()
             break;
         case 4:
             controller_removeEmployee(listaEmpleados);
+            break;
+        case 5:
+            controller_sortEmployee(listaEmpleados);
+            break;
 
 
             //LL_SORT LE PASO UNA FUNCION QUE HAGA LA COMPARACION: NADA MAS

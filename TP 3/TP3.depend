@@ -255,3 +255,53 @@
 	"LinkedList.h"
 	"Employee.h"
 
+1561986432 source:c:\users\matu\desktop\primercuatri_2019\biblioteca_utn\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1561986432 c:\users\matu\desktop\primercuatri_2019\biblioteca_utn\utn.h
+
+1561995444 source:c:\users\matu\desktop\primercuatri_2019\tp 3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+	"utn.h"
+
+1561986432 c:\users\matu\desktop\primercuatri_2019\tp 3\linkedlist.h
+
+1561986432 c:\users\matu\desktop\primercuatri_2019\tp 3\controller.h
+
+1561997657 c:\users\matu\desktop\primercuatri_2019\tp 3\employee.h
+
+1561986432 c:\users\matu\desktop\primercuatri_2019\tp 3\utn.h
+
+1561996357 source:c:\users\matu\desktop\primercuatri_2019\tp 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1561986432 source:c:\users\matu\desktop\primercuatri_2019\tp 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1561996722 source:c:\users\matu\desktop\primercuatri_2019\tp 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	<string.h>
+	"utn.h"
+
+1561986432 c:\users\matu\desktop\primercuatri_2019\tp 3\parser.h
+

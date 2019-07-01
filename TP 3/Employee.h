@@ -27,6 +27,13 @@ int employee_getSueldo(Employee* this,int* sueldo);
 //MIS FUNCIONES
 int findEmployee(LinkedList* pArrayList, int *id, int*indice);
 
+int employeeSortById(void * empleadoA, void * empleadoB);
+int employeeSortByName(void * empleadoA, void * empleadoB);
+int employeeSortByHorasTrabajadas(void * empleadoA, void * empleadoB);
+int employeeSortBySueldo(void * empleadoA, void * empleadoB);
+
+
+
 
 
 #endif // employee_H_INCLUDED
