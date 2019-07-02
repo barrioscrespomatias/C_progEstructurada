@@ -652,7 +652,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 
     if(this!= NULL)
     {
-        for(i=0; i<=ll_len(this)-1; i++)
+        for(i=0; i<ll_len(this)-1; i++)
         {
 
             nodoA = getNode(this,i);
