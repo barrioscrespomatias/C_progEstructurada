@@ -642,45 +642,46 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 {
     int returnAux = -1;
 
-    Node* pNodeA = NULL;
-    Node* pNodeB = NULL;
-    Node* pNodeAuxiliar = NULL;
+    int i = 0;
+    int j = 0;
 
-    int (*ptr_funcion)(void*,void*);
-    ptr_funcion = pFunc;
 
-    int i, j;
+    Node* nodoA;
+    Node* nodoB;
+    Node* nodoAux;
 
-    if(this!= NULL && pFunc!= NULL)
+    if(this!= NULL)
     {
-        for(i=0; i<ll_len(this)-1; i++)
+        for(i=0; i<=ll_len(this)-1; i++)
         {
-            pNodeA = getNode(this,i);
 
-            for(j=i+1; j<ll_len(this); j++)
+            nodoA = getNode(this,i);
+
+            for(j = i+1; j<ll_len(this); j++)
             {
-                pNodeB = getNode(this,j);
+                nodoB = getNode(this,j);
 
-                if(ptr_funcion == 1 || ptr_funcion == 0 || ptr_funcion == -1)
-
-                    ///La funcion debe recibir los paratros de punteros.
-                    /// tengo que hacer un get de la funcion.
-                    /// Ademas falta contemplar el orden
-                    //if(*pFunc)
+                if(pFunc && order == 1)
                 {
-                    pNodeA = pNodeB;
-                    pNodeB = pNodeAuxiliar;
-                    pNodeAuxiliar = pNodeA;
+                    nodoA = nodoB;
+                    nodoB = nodoAux;
+                    nodoAux = nodoA;
                     returnAux = 0;
                 }
 
-//                else if(ptr_funcion==0)
-//                {
-//                    pNodeA = pNodeB;
-//                    pNodeB = pNodeAuxiliar;
-//                    pNodeAuxiliar = pNodeA;
-//                    returnAux = 0;
-//                }
+                else if(!pFunc)
+
+                {
+                    if(order == 0)
+                    {
+                        printf("Ingresa OK\n");
+                        nodoA = nodoB;
+                        nodoB = nodoAux;
+                        nodoAux = nodoA;
+                        returnAux = 0;
+
+                    }
+                }
             }
         }
     }
