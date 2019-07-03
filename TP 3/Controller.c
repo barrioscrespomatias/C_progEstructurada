@@ -117,6 +117,102 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
+    int idModificar;
+    int existe;
+    char confirma;
+    int indice;
+    int opcion;
+    Employee *empleado;
+    empleado = employee_new();
+
+    ///SUBMENU MODIFICAR
+    int idAuxModificado;
+    char nombreAux[100];
+    int horasAux;
+    int sueldoAux;
+
+    char nombreAnterior[100];
+    int horasAnterior;
+    int sueldoAnterior;
+
+    idModificar = getValidInt("Ingrese Id del empleado a modificar: \n");
+    existe = findEmployee(pArrayListEmployee,&idModificar,&indice);
+
+
+    if(existe!=1)
+    {
+        printf("No existe un empleado con el Id cargado\n");
+    }
+    else
+    {
+
+        confirma = getValidCharSN("Realmente desea modificar el empleado? (s/n): ");
+        if(confirma == 'S' || confirma == 's')
+        {
+            do
+            {
+                system("cls");
+                printf("Menu modificar: \n");
+                printf("1. Id\n");
+                printf("2. Nombre\n");
+                printf("3. Horas\n");
+                printf("4. Sueldo\n");
+                printf("5. Salir\n\n");
+
+                opcion = getValidInt("Ingrese una opcion: ");
+                empleado = ll_get(pArrayListEmployee,indice);
+
+                switch(opcion)
+                {
+                case 1:
+                    ///ID
+                    idAuxModificado = getValidInt("Ingrese nuevo id: ");
+//                    empleado = ll_get(pArrayListEmployee,indice);
+                    //TENDRIA QUE TOMAR ID AUX DESDE EL IDGET
+                    employee_setId(empleado,idAuxModificado);
+                    printf("El empleado %s se ha modificado exitosamente!! Su nuevo ID es %d\n",empleado->nombre,empleado->id);
+                    system("pause");
+                    break;
+                case 2:
+                    ///NOMBRE
+                    getValidStringLetras("Ingrese nuevo nombre: ","Error. Solo puede ingresar letras.",nombreAux);
+                    employee_getNombre(empleado,nombreAnterior);
+                    employee_setNombre(empleado,nombreAux);
+                    printf("El nombre del empleado se ha sustituido exitosamente!!\n\n%s->%s\n",nombreAnterior,empleado->nombre);
+                    system("pause");
+                    break;
+                case 3:
+                    ///HORAS
+                    horasAux=getValidInt("Ingrese nuevas horas trabajadas: ");
+                    employee_getHorasTrabajadas(empleado,&horasAnterior);
+                    employee_setHorasTrabajadas(empleado,horasAux);
+                    printf("\n\nLas horas del empleado pasaron de un total de %d a un total de %d.\n\n",horasAnterior,empleado->horasTrabajadas);
+                    system("pause");
+                    break;
+                case 4:
+                    sueldoAux=getValidInt("Ingrese nuevo sueldo: ");
+                    employee_getSueldo(empleado,&sueldoAnterior);
+                    employee_setSueldo(empleado,sueldoAux);
+                    printf("\n\nEl sueldo del empleado paso de un total de $%d a un monto de $%d.\n\n",sueldoAnterior,empleado->sueldo);
+                    system("pause");
+                    break;
+                }
+
+            }
+
+            while(opcion != 5);
+
+
+        }
+        else
+        {
+            printf("Se ha cancelado la modificacion\n\n");
+        }
+
+    }
+
+    system("pause");
+
     return 1;
 }
 
@@ -138,7 +234,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 
     idDelete = getValidInt("Ingrese Id del empleado a eliminar: ");
     existe = findEmployee(pArrayListEmployee,&idDelete,&indice);
-    indice = &indice;
+    //indice = &indice;
 
 
     if(existe!=1)
@@ -152,6 +248,8 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
         if(confirma == 'S' || confirma == 's')
         {
             ll_remove(pArrayListEmployee,indice);
+            printf("El empleado con el ID %d ha sido borrado existosamente\n",idDelete);
+
         }
 
     }
@@ -275,6 +373,36 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
+    FILE* miArchivoBinario;
+    Employee *unEmpleado;
+    int i = 0;
+    int cantidad;
+
+
+    miArchivoBinario = fopen(path,"wb");
+    cantidad = ll_len(pArrayListEmployee);
+
+
+
+    if(pArrayListEmployee!= NULL&& miArchivoBinario != NULL)
+    {
+        for(i=0; i<cantidad; i++)
+        {
+            unEmpleado = ll_get(pArrayListEmployee,i);
+            fwrite(unEmpleado,sizeof(Employee),1,miArchivoBinario);
+        }
+    }
+
+
+
+
+    fclose(miArchivoBinario);
+
+
+
+
+
+
     return 1;
 }
 

@@ -146,10 +146,14 @@ int main()
         printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto). \n");
         // printf("3. Alta de empleado\n");
 
-        printf("2. Agregar empleado\n");
-        printf("3. Listar empleados\n");
-        printf("4. Borrar empleado\n");
-        printf("5. Ordenar empleados\n");
+        printf("2.  Agregar empleado\n");
+        printf("3.  Listar empleados\n");
+        printf("4.  Borrar empleado\n");
+        printf("5.  Ordenar empleados\n");
+        printf("6.  Modificar empleados\n");
+        printf("7.  Guardar Binario\n");
+        printf("10. Salir\n");
+
 
 
 
@@ -163,7 +167,6 @@ int main()
             break;
         case 2:
             controller_addEmployee(listaEmpleados);
-
             break;
         case 3:
             controller_ListEmployee(listaEmpleados);
@@ -174,9 +177,12 @@ int main()
         case 5:
             controller_sortEmployee(listaEmpleados);
             break;
-
-
-            //LL_SORT LE PASO UNA FUNCION QUE HAGA LA COMPARACION: NADA MAS
+        case 6:
+            controller_editEmployee(listaEmpleados);
+            break;
+        case 7:
+            controller_saveAsBinary("data.bin",listaEmpleados);
+            break;
 
         }
     }

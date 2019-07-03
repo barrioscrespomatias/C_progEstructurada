@@ -645,46 +645,64 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
     int i = 0;
     int j = 0;
 
-
     Node* nodoA;
     Node* nodoB;
-    Node* nodoAux;
+    void* nodoAux;
 
-    if(this!= NULL)
+    if(this!= NULL && pFunc != NULL && (order==0 || order==1))
     {
         for(i=0; i<ll_len(this)-1; i++)
         {
-
-            nodoA = getNode(this,i);
-
             for(j = i+1; j<ll_len(this); j++)
             {
-                nodoB = getNode(this,j);
 
-                if(pFunc && order == 1)
+                /// Los valores de J e Y cambian. No son estaticos.
+                /// ITERAN CON LOS FOR
+
+                nodoA = ll_get(this,i);
+                nodoB = ll_get(this,j);
+
+//                if( (pFunc(ll_get(this,i), ll_get(this,j)) == 1) && order == 1)
+                if( (pFunc(nodoA,nodoB) == 1) && order == 1)
+
                 {
+//                    nodoAux = ll_get(this,i);
+//                    ll_set(this,i, ll_get(this,j));
+//                    ll_set(this,j, nodoAux);
+
+                    nodoAux = nodoA;
                     nodoA = nodoB;
                     nodoB = nodoAux;
-                    nodoAux = nodoA;
-                    returnAux = 0;
+
                 }
 
-                else if(!pFunc)
+//                nodoA = ll_get(this,i);
+//                nodoB = ll_get(this,j);
+
+//                else if( (pFunc(ll_get(this,i), ll_get(this,j)) == -1) && order == 0)
+                else if( (pFunc(nodoA,nodoB) == -1) && order == 0)
 
                 {
-                    if(order == 0)
-                    {
-                        printf("Ingresa OK\n");
-                        nodoA = nodoB;
-                        nodoB = nodoAux;
-                        nodoAux = nodoA;
-                        returnAux = 0;
 
-                    }
+
+                    nodoAux = ll_get(this,i);
+                    ll_set(this,i, ll_get(this,j));
+                    ll_set(this,j, nodoAux);
+
+//                    nodoAux = nodoA;
+//                    nodoA = nodoB;
+//                    nodoB = nodoAux;
+
                 }
             }
         }
+
+        returnAux = 0;
     }
+
+
+
+
 
     return returnAux;
 
