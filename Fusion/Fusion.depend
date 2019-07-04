@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1273122125 source:c:\users\matias\desktop\fusion\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1562072096 c:\users\matias\desktop\fusion\linkedlist.h
+
+1562072096 c:\users\matias\desktop\fusion\controller.h
+
+1562072096 c:\users\matias\desktop\fusion\employee.h
+
+1273121270 source:c:\users\matias\desktop\fusion\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1273121762 source:c:\users\matias\desktop\fusion\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1273121504 source:c:\users\matias\desktop\fusion\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	<string.h>
+	"utn.h"
+
+1562072097 c:\users\matias\desktop\fusion\parser.h
+
+1562072097 c:\users\matias\desktop\fusion\utn.h
+
