@@ -13,7 +13,7 @@
 int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 {
     Employee * auxiliar;
-    char id[50], nombre[50], horas[50], sueldo[50];
+    char id[50], nombre[50], horas[50], sueldo[50], edad[50], empleo[50];
 
 
     ///DESDE EL PARSER SOLO LOS TENGO CONVERTIR A MI TIPO DE DATO Y CARGARLO EN EL ARRAY DE EMPLEADOS.

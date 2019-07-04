@@ -12,13 +12,15 @@ Employee* employee_new()
     nuevoEmpleado = (Employee*)malloc(sizeof(Employee));
     return nuevoEmpleado;
 }
-Employee* employee_newParametros(char* id,char* nombre,char* horasTrabajadas, char* sueldo)
+Employee* employee_newParametros(char* id,char* nombre, char* emploeo, char* edad, char* horasTrabajadas, char* sueldo)
 {
     Employee * auxiliar;
     auxiliar = employee_new();
 
     auxiliar->id = atoi(id);
     strcpy(auxiliar->nombre,nombre);
+    strcpy(auxiliar->empleo,emploeo);
+    auxiliar->edad = atoi(edad);
     auxiliar->horasTrabajadas = atoi(horasTrabajadas);
     auxiliar->sueldo = atoi(sueldo);
 
@@ -57,6 +59,36 @@ int employee_getId(Employee* this,int* id)
 
     return getIdOk;
 }
+
+
+///EDAD
+
+int employee_setEdad(Employee* this,int edad)
+{
+    int setOk = 0;
+
+    if(this!= NULL && edad>0)
+    {
+        this->edad = edad;
+        setOk = 1;
+    }
+
+    return setOk;
+}
+
+int employee_getEdad(Employee* this,int* edad)
+{
+    int getEdadOk = 0;
+
+    if(this!= NULL && this->edad >0)
+    {
+        *edad = this->edad;
+        getEdadOk = 1;
+    }
+
+    return getEdadOk;
+}
+
 
 
 /// SET NOMBRE
@@ -99,6 +131,53 @@ int employee_getNombre(Employee* this,char* nombre)
     else
     {
         printf("Error. El puntero es NULL o el nombre no tiene caracteres.\n");
+    }
+
+    return getOk;
+
+}
+
+
+///EMPLEO
+
+int employee_setEmpleo(Employee* this,char* empleo)
+{
+    int setOk = 0;
+    int size = strlen(empleo);
+
+    if(this!= NULL && size>0)
+    {
+
+        strcpy(this->empleo, empleo);
+        setOk = 1;
+    }
+    else
+    {
+        printf("Error. El puntero es NULL o el empleo ingresado no contiene caracteres.");
+    }
+
+    return setOk;
+
+}
+
+///GET NOMBRE
+
+int employee_getEmpleo(Employee* this,char* empleo)
+{
+    int getOk = 0;
+    int size = 0;
+
+    size = strlen(this->empleo);
+
+    if(this!= NULL && size >0)
+    {
+        /// SIEMPRE ME VOY ACORDAR DEL STRCPY
+        strcpy(empleo,this->empleo);
+        getOk = 1;
+    }
+    else
+    {
+        printf("Error. El puntero es NULL o el empleo no tiene caracteres.\n");
     }
 
     return getOk;
