@@ -368,7 +368,7 @@ int laQuefiltra(void* empleado)
     if(empleado != NULL)
     {
 
-         if(((Employee*)empleado)->edad >20 && strcmp( ((Employee*)empleado)->nombre,"programador") == 0)
+         if( ((Employee*)empleado)->edad > 20 && strcmp( ((Employee*)empleado)->empleo,"programador") == 0)
          {
              returnAux = 1;
          }

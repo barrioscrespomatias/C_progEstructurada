@@ -126,6 +126,7 @@ int main()
 
     int option = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
+    LinkedList* nuevaLista = ll_newLinkedList();
     do
     {
         system("cls");
@@ -154,6 +155,9 @@ int main()
         printf("8.  Cagar Binario\n");
         printf("9.  Guardar NUEVO TEXTO\n");
         printf("10. Cargar NUEVO TEXTO\n");
+        printf("11. Calcular Sueldos\n");
+        printf("12. Filtrar empleados programadores mayores de 20 anios\n");
+        printf("13. Mostrar empleados filtrados\n");
 
 
         printf("15. Salir\n");
@@ -201,12 +205,13 @@ int main()
         case 11:
             ll_map(listaEmpleados,laQueMapea);
             break;
-//        case 12:
-//            ll_filter(listaEmpleados,laQuefiltra);
-//            break;
-        case 13:
-            controller_ListEmployee(ll_filter(listaEmpleados,laQuefiltra));
+        case 12:
+            nuevaLista = ll_filter(listaEmpleados,laQuefiltra);
             break;
+        case 13:
+            controller_ListEmployee(nuevaLista);
+            break;
+
         }
     }
     while(option != 15);

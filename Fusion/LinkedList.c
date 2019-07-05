@@ -740,6 +740,7 @@ int ll_map(LinkedList* lista,int (*pFunc)(void*))
 LinkedList* ll_filter(LinkedList* listIn , int (*pFunc)(void*))
 {
     LinkedList * nuevoLinked;
+    nuevoLinked = NULL;
     nuevoLinked = ll_newLinkedList();
 
 //    int returnAux = 0;
@@ -750,7 +751,6 @@ LinkedList* ll_filter(LinkedList* listIn , int (*pFunc)(void*))
 
     cantidad = ll_len(listIn);
 
-
     if(listIn != NULL && pFunc!= NULL)
     {
 //        returnAux = 1;
@@ -759,10 +759,13 @@ LinkedList* ll_filter(LinkedList* listIn , int (*pFunc)(void*))
         {
             if(pFunc(ll_get(listIn,i)))
             {
-              ll_set(nuevoLinked,i,ll_get(listIn,i));
+              ll_add(nuevoLinked,ll_get(listIn,i));
             }
         }
     }
+
+    printf("Empleados filtrados por edad y empleo\n");
+    system("pause");
 
     return nuevoLinked;
 
