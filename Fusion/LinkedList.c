@@ -708,3 +708,29 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 
 }
 
+int ll_map(LinkedList* lista,int (*pFunc)(void*))
+{
+    int retunAux = 0;
+    Node* unEMpleado;
+
+    int i;
+    int cantidad = 0;
+
+    cantidad = ll_len(lista);
+
+    if(lista != NULL && pFunc != NULL)
+    {
+        retunAux = 1;
+        for(i=0 ; i<cantidad; i++)
+        {
+            if(pFunc(ll_get(lista,i)))
+            {
+                ll_set(lista,i,ll_get(lista,i));
+
+            }
+        }
+
+    }
+
+    return retunAux;
+}

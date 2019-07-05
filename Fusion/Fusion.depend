@@ -38,7 +38,7 @@
 
 1562072097 c:\users\matias\desktop\fusion\utn.h
 
-1562253260 source:c:\users\matu\desktop\primercuatri_2019\fusion\controller.c
+1562337400 source:c:\users\matu\desktop\primercuatri_2019\fusion\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -47,15 +47,15 @@
 	<string.h>
 	"utn.h"
 
-1562253260 c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.h
+1562341088 c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.h
 
-1562257310 c:\users\matu\desktop\primercuatri_2019\fusion\employee.h
+1562341366 c:\users\matu\desktop\primercuatri_2019\fusion\employee.h
 
-1562253260 c:\users\matu\desktop\primercuatri_2019\fusion\parser.h
+1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\parser.h
 
-1562253260 c:\users\matu\desktop\primercuatri_2019\fusion\utn.h
+1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\utn.h
 
-1562253260 source:c:\users\matu\desktop\primercuatri_2019\fusion\employee.c
+1562341860 source:c:\users\matu\desktop\primercuatri_2019\fusion\employee.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -64,15 +64,15 @@
 	<string.h>
 	"utn.h"
 
-1562253260 c:\users\matu\desktop\primercuatri_2019\fusion\controller.h
+1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\controller.h
 
-1562253260 source:c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.c
+1562341906 source:c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"LinkedList.h"
 
-1562256482 source:c:\users\matu\desktop\primercuatri_2019\fusion\main.c
+1562337400 source:c:\users\matu\desktop\primercuatri_2019\fusion\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -80,13 +80,13 @@
 	"Employee.h"
 	<string.h>
 
-1562253260 source:c:\users\matu\desktop\primercuatri_2019\fusion\parser.c
+1562337400 source:c:\users\matu\desktop\primercuatri_2019\fusion\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1562253260 source:c:\users\matu\desktop\primercuatri_2019\fusion\utn.c
+1562337400 source:c:\users\matu\desktop\primercuatri_2019\fusion\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

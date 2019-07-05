@@ -43,6 +43,9 @@ int employeeSortByName(void * empleadoA, void * empleadoB);
 int employeeSortByHorasTrabajadas(void * empleadoA, void * empleadoB);
 int employeeSortBySueldo(void * empleadoA, void * empleadoB);
 
+///Parcial
+int laQueMapea (void* empleado);
+
 
 
 

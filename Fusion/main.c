@@ -198,6 +198,9 @@ int main()
 //            controller_loadFromText("nuevaData.csv",listaEmpleados);
 //            break;
 //
+        case 11:
+            ll_map(listaEmpleados,laQueMapea);
+            break;
         }
     }
     while(option != 15);

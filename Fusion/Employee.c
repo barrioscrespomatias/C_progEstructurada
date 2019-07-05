@@ -342,7 +342,19 @@ int employeeSortBySueldo(void * empleadoA, void * empleadoB)
     return retorno;
 }
 
+int laQueMapea (void* empleado)
+{
+    int returnAux = 0;
 
+    if(empleado!= NULL)
+    {
+        ((Employee*)empleado)->sueldo = ((Employee*)empleado)->horasTrabajadas * 300;
+        returnAux = 1;
+    }
+
+
+    return returnAux;
+}
 
 
 
