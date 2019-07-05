@@ -24,12 +24,14 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
     pFile = fopen(path,"r");
     if(pFile != NULL)
     {
+
         parser_EmployeeFromText(pFile,pArrayListEmployee);
     }
 
     else
     {
-        printf("Error de apertura de archivo texto");
+        printf("Error de apertura de archivo texto\n");
+        system("pause");
     }
 
 
@@ -304,7 +306,9 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 
     else
     {
-        printf(" Id  |Nombre       |Horas|Sueldo    \n");
+        ll_sort(pArrayListEmployee,employeeSortByName,1);
+
+        printf(" Id  |Nombre       |Empleo       |Edad|Horas     |Sueldo  \n");
 
         for(i=0; i<ll_len(pArrayListEmployee); i++)
         {
@@ -314,10 +318,11 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
                 system("pause");
             }
 
-            printf("%5d|%13s|%5d|%10d\n",empleados->id, empleados->nombre, empleados->horasTrabajadas, empleados->sueldo);
+            printf("%5d|%13s|%13s|%4d|%10d|%8d\n",empleados->id, empleados->nombre, empleados->empleo, empleados->edad, empleados->horasTrabajadas, empleados->sueldo);
 
 
         }
+
 
         system("pause");
 

@@ -12,14 +12,14 @@ Employee* employee_new()
     nuevoEmpleado = (Employee*)malloc(sizeof(Employee));
     return nuevoEmpleado;
 }
-Employee* employee_newParametros(char* id,char* nombre, char* emploeo, char* edad, char* horasTrabajadas, char* sueldo)
+Employee* employee_newParametros(char* id,char* nombre, char* empleo, char* edad, char* horasTrabajadas, char* sueldo)
 {
     Employee * auxiliar;
     auxiliar = employee_new();
 
     auxiliar->id = atoi(id);
     strcpy(auxiliar->nombre,nombre);
-    strcpy(auxiliar->empleo,emploeo);
+    strcpy(auxiliar->empleo,empleo);
     auxiliar->edad = atoi(edad);
     auxiliar->horasTrabajadas = atoi(horasTrabajadas);
     auxiliar->sueldo = atoi(sueldo);

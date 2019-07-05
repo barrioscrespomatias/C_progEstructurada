@@ -17,16 +17,21 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 
 
     ///DESDE EL PARSER SOLO LOS TENGO CONVERTIR A MI TIPO DE DATO Y CARGARLO EN EL ARRAY DE EMPLEADOS.
+//    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,edad,empleo,sueldo);
 
-    fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,sueldo);
+//    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,]\n",id,nombre,empleo,edad,horas);
 
 
     while(!feof(pFile))
     {
+//        fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,empleo,edad,horas,sueldo);
+        fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,empleo,edad,horas,sueldo);
 
-        fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,sueldo);
-        auxiliar = employee_newParametros(id, nombre,horas,sueldo);
+//        fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,edad,empleo,sueldo);
+        auxiliar = employee_newParametros(id,nombre,empleo,edad,horas,sueldo);
         ll_add(pArrayListEmployee,auxiliar);
+
+
 //        printf("%d\n",auxiliar->id);
 //        printf("\nLEIDOS: %d\n",ll_len(pArrayListEmployee));
     }

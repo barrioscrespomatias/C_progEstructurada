@@ -166,15 +166,15 @@ int main()
 
         switch(option)
         {
-//        case 1:
-//            controller_loadFromText("data.csv",listaEmpleados);
-//            break;
+        case 1:
+            controller_loadFromText("archivo.csv",listaEmpleados);
+            break;
 //        case 2:
 //            controller_addEmployee(listaEmpleados);
 //            break;
-//        case 3:
-//            controller_ListEmployee(listaEmpleados);
-//            break;
+        case 3:
+            controller_ListEmployee(listaEmpleados);
+            break;
 //        case 4:
 //            controller_removeEmployee(listaEmpleados);
 //            break;

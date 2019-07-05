@@ -92,3 +92,57 @@
 	<string.h>
 	"utn.h"
 
+1562266006 source:c:\users\matias\desktop\primercuatri_2019\fusion\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	<string.h>
+	"utn.h"
+
+1562260356 c:\users\matias\desktop\primercuatri_2019\fusion\linkedlist.h
+
+1562273869 c:\users\matias\desktop\primercuatri_2019\fusion\employee.h
+
+1562260356 c:\users\matias\desktop\primercuatri_2019\fusion\parser.h
+
+1562260356 c:\users\matias\desktop\primercuatri_2019\fusion\utn.h
+
+1562273855 source:c:\users\matias\desktop\primercuatri_2019\fusion\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+	"utn.h"
+
+1562260356 c:\users\matias\desktop\primercuatri_2019\fusion\controller.h
+
+1562260356 source:c:\users\matias\desktop\primercuatri_2019\fusion\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1562268004 source:c:\users\matias\desktop\primercuatri_2019\fusion\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1562274017 source:c:\users\matias\desktop\primercuatri_2019\fusion\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1562260356 source:c:\users\matias\desktop\primercuatri_2019\fusion\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
