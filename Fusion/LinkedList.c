@@ -711,7 +711,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void*,void*), int order)
 int ll_map(LinkedList* lista,int (*pFunc)(void*))
 {
     int retunAux = 0;
-    Node* unEMpleado;
+//    Node* unEMpleado;
 
     int i;
     int cantidad = 0;
@@ -734,3 +734,37 @@ int ll_map(LinkedList* lista,int (*pFunc)(void*))
 
     return retunAux;
 }
+
+
+
+LinkedList* ll_filter(LinkedList* listIn , int (*pFunc)(void*))
+{
+    LinkedList * nuevoLinked;
+    nuevoLinked = ll_newLinkedList();
+
+//    int returnAux = 0;
+    int i;
+    int cantidad = 0;
+//    Node * unEmpleado;
+
+
+    cantidad = ll_len(listIn);
+
+
+    if(listIn != NULL && pFunc!= NULL)
+    {
+//        returnAux = 1;
+
+        for(i=0; i<cantidad; i++)
+        {
+            if(pFunc(ll_get(listIn,i)))
+            {
+              ll_set(nuevoLinked,i,ll_get(listIn,i));
+            }
+        }
+    }
+
+    return nuevoLinked;
+
+}
+

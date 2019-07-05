@@ -45,6 +45,8 @@ int employeeSortBySueldo(void * empleadoA, void * empleadoB);
 
 ///Parcial
 int laQueMapea (void* empleado);
+int laQuefiltra(void* empleado);
+
 
 
 

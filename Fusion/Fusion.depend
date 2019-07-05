@@ -47,15 +47,15 @@
 	<string.h>
 	"utn.h"
 
-1562341088 c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.h
+1562343870 c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.h
 
-1562341366 c:\users\matu\desktop\primercuatri_2019\fusion\employee.h
+1562344200 c:\users\matu\desktop\primercuatri_2019\fusion\employee.h
 
 1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\parser.h
 
 1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\utn.h
 
-1562341860 source:c:\users\matu\desktop\primercuatri_2019\fusion\employee.c
+1562343553 source:c:\users\matu\desktop\primercuatri_2019\fusion\employee.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -66,13 +66,13 @@
 
 1562337400 c:\users\matu\desktop\primercuatri_2019\fusion\controller.h
 
-1562341906 source:c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.c
+1562344064 source:c:\users\matu\desktop\primercuatri_2019\fusion\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"LinkedList.h"
 
-1562337400 source:c:\users\matu\desktop\primercuatri_2019\fusion\main.c
+1562344153 source:c:\users\matu\desktop\primercuatri_2019\fusion\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"

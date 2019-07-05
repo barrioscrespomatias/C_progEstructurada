@@ -342,6 +342,8 @@ int employeeSortBySueldo(void * empleadoA, void * empleadoB)
     return retorno;
 }
 
+
+///FUNCION QUE MAPEA
 int laQueMapea (void* empleado)
 {
     int returnAux = 0;
@@ -357,6 +359,22 @@ int laQueMapea (void* empleado)
 }
 
 
+///FUNCION QUE FILTRA
+
+int laQuefiltra(void* empleado)
+{
+    int returnAux = 0;
+
+    if(empleado != NULL)
+    {
+
+         if(((Employee*)empleado)->edad >20 && strcmp( ((Employee*)empleado)->nombre,"programador") == 0)
+         {
+             returnAux = 1;
+         }
+    }
 
 
+    return returnAux;
+}
 

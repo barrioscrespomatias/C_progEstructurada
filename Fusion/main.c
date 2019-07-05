@@ -201,6 +201,12 @@ int main()
         case 11:
             ll_map(listaEmpleados,laQueMapea);
             break;
+//        case 12:
+//            ll_filter(listaEmpleados,laQuefiltra);
+//            break;
+        case 13:
+            controller_ListEmployee(ll_filter(listaEmpleados,laQuefiltra));
+            break;
         }
     }
     while(option != 15);
