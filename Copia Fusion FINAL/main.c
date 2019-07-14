@@ -192,7 +192,7 @@ int main()
             controller_ListPelicula(listaPeliculas);
             break;
         case 5:
-            cantidadID(listaPeliculas);
+            depurarPeliculas(listaPeliculas);
             break;
         case 4:
             controller_sortPelicula(listaPeliculas);

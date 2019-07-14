@@ -408,30 +408,27 @@ int peliculaSortByGenero(void * peliculaA, void * peliculaB)
 //    return returnAux;
 //}
 
-ePelicula constructorPeliculas()
+ePelicula* nuevaPelicula(void)
 {
-    ePelicula* auxilar = (ePelicula*) malloc(sizeof(ePelicula));
+    ePelicula* auxilar;
+    auxilar = (ePelicula*) malloc(sizeof(ePelicula));
+    return auxilar;
 }
 
 int cantidadID(LinkedList* pArrayList)
 {
-    LinkedList *nuevo = ll_newLinkedList();
 
-    ePelicula * unaPelicula;
-    ePelicula * dosPelicula;
-    ePelicula * tresPelicula;
+    ePelicula *unaPelicula;
 
     int i;
     int contador = 0;
-    int cantidadPeliculas;
-    char genero[50];
-    char genero2[50];
+    int totalPeliculas;
 
-    cantidadPeliculas = ll_len(pArrayList);
+    totalPeliculas = ll_len(pArrayList);
 
     ll_sort(pArrayList,peliculaSortById,1);
 
-    for(i = 0; i<cantidadPeliculas; i++)
+    for(i = 0; i<totalPeliculas; i++)
     {
         unaPelicula = (ePelicula*) ll_get(pArrayList,i);
 
@@ -441,44 +438,42 @@ int cantidadID(LinkedList* pArrayList)
         }
 
     }
-    printf("La cantidad de peliculas son: %d\n",contador);
-    system("pause");
 
-    contador = 0;
+    return contador;
+}
 
 
-    for(i= 0; i<cantidadPeliculas; i++)
+int depurarPeliculas(LinkedList* pArrayList)
+{
+    int returnAux = 0;
+    int i;
+    int largo = cantidadID(pArrayList);
+    int contador = 0;
+
+    ePelicula* unaPelicula = (ePelicula*)malloc(sizeof(ePelicula));
+
+    ll_sort(pArrayList,peliculaSortById,1);
+
+    for(i = 0; i<largo; i++)
     {
-
         unaPelicula = (ePelicula*) ll_get(pArrayList,i);
 
-        if(unaPelicula->id == 0)
+        if(unaPelicula->id == contador && contador <= 30)
+        {
+            printf("%d %s %d %s\n",unaPelicula->id, unaPelicula->nombre, unaPelicula->anio, unaPelicula->genero);
+        }
+        else
         {
             contador++;
-
-            dosPelicula = ll_get(pArrayList, i+1);
-
-
-            if(printf("%d %s %d %s|",unaPelicula->id, unaPelicula->nombre, unaPelicula->anio, unaPelicula->genero))
-            {
-
-                if(printf("%s|",dosPelicula->genero))
-                {
-                    tresPelicula = ll_get(pArrayList,i+2);
-                    printf("%s\n",tresPelicula->genero);
-                }
-                break;
-            }
         }
-
     }
 
-
-    printf("Cantidad de pelicuas con ID 0 %d\n",contador);
     system("pause");
 
 
-
-    return 1;
-
+    return returnAux;
 }
+
+
+
+
