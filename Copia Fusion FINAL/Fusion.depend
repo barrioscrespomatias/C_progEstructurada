@@ -146,3 +146,57 @@
 	<string.h>
 	"utn.h"
 
+1563295046 source:c:\users\matu\desktop\copia fusion final\employee.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+	"utn.h"
+
+1563066084 c:\users\matu\desktop\copia fusion final\linkedlist.h
+
+1563281676 c:\users\matu\desktop\copia fusion final\controller.h
+
+1563294940 c:\users\matu\desktop\copia fusion final\employee.h
+
+1563066085 c:\users\matu\desktop\copia fusion final\utn.h
+
+1563284910 source:c:\users\matu\desktop\copia fusion final\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1563284910 source:c:\users\matu\desktop\copia fusion final\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	<string.h>
+
+1563280478 source:c:\users\matu\desktop\copia fusion final\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1563066085 source:c:\users\matu\desktop\copia fusion final\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1563281584 source:c:\users\matu\desktop\copia fusion final\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	<string.h>
+	"utn.h"
+
+1563066085 c:\users\matu\desktop\copia fusion final\parser.h
+
