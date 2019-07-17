@@ -446,29 +446,90 @@ int cantidadID(LinkedList* pArrayList)
 int depurarPeliculas(LinkedList* pArrayList)
 {
     int returnAux = 0;
-    int i;
+    int i,j,k;
     int largo = cantidadID(pArrayList);
     int contador = 0;
+    char buffer[100];
+    int cantidadRepetida = 0;
 
     ePelicula* unaPelicula = (ePelicula*)malloc(sizeof(ePelicula));
+    ePelicula* auxiliar = (ePelicula*)malloc(sizeof(ePelicula));
+    ePelicula* auxiliarB = (ePelicula*)malloc(sizeof(ePelicula));
 
-    ll_sort(pArrayList,peliculaSortById,1);
 
-    for(i = 0; i<largo; i++)
+//    ll_sort(pArrayList,peliculaSortById,1);
+
+    for(i=0; i<ll_len(pArrayList)-1; i++)
     {
         unaPelicula = (ePelicula*) ll_get(pArrayList,i);
 
-        if(unaPelicula->id == contador && contador <= 30)
+
+
+        for(j=i+1; j<ll_len(pArrayList); j++)
         {
-            printf("%d %s %d %s\n",unaPelicula->id, unaPelicula->nombre, unaPelicula->anio, unaPelicula->genero);
-        }
-        else
-        {
-            contador++;
+             auxiliar = (ePelicula*)ll_get(pArrayList,j);
+
+
+
+
+
+
+            for(k=j+1; k<ll_len(pArrayList); k++)
+            {
+                auxiliarB= (ePelicula*)ll_get(pArrayList,k);
+
+
+
+
+                if(unaPelicula->id== auxiliar->id && auxiliar->id == auxiliarB->id) //(strcmp(unaPelicula->nombre,auxiliar->nombre) == 0) && unaPelicula->id == auxiliar->id)
+                {
+                    strcat(unaPelicula->genero,"|");
+                    strcat(unaPelicula->genero,auxiliar->genero);
+                    strcat(unaPelicula->genero,"|");
+                    strcat(unaPelicula->genero,auxiliarB->genero);
+                printf("%d %s %d %s\n",unaPelicula->id,unaPelicula->nombre,unaPelicula->anio, unaPelicula->genero);
+
+
+
+
+
+
+//                auxiliar = (ePelicula*)ll_get(pArrayList,j);
+//                strcat(unaPelicula->genero,"|");
+//                strcat(unaPelicula->genero,auxiliar->genero);
+
+                }
+
+
+
+
+            }
+
+
+
         }
     }
 
+
     system("pause");
+
+
+
+
+
+
+
+
+
+//            strcat(unaPelicula->genero,"|");
+//            strcat(unaPelicula->genero,auxiliar->genero);
+//
+//
+//
+//            printf("%d %s %d %s\n",unaPelicula->id, unaPelicula->nombre, unaPelicula->anio, unaPelicula->genero);
+//
+
+
 
 
     return returnAux;

@@ -169,6 +169,7 @@ int main()
 
         printf("\n\nIngrese una opcion: ");
         scanf("%d",&option);
+        printf("\n");
 
         switch(option)
         {
