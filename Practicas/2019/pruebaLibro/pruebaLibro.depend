@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1565022106 source:c:\users\matu\desktop\practicas\2019\pruebalibro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

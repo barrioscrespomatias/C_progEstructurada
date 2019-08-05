@@ -13,14 +13,22 @@
 int parser_PeliculaFromText(FILE* pFile, LinkedList* pArrayListPelicula)
 {
     ePelicula * auxiliar;
-    char id[50], nombre[50], anio[50], genero[50];//, edad[50], empleo[50];
+//    char id[50], nombre[50], anio[50], genero[50];//, edad[50], empleo[50];
+    char dia[50], mes[50], anio[50], clase[10], comprobante[50], razonSocial[150], cuit[50], netoGravado[50];
+    char iva[50], exento[50], percepcion[50], total[50], fecha[50];
+
+
+    int i;
 
 
     ///DESDE EL PARSER SOLO LOS TENGO CONVERTIR A MI TIPO DE DATO Y CARGARLO EN EL ARRAY DE EMPLEADOS.
 //    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,horas,edad,empleo,sueldo);
 
 //    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%[^,]\n",id,nombre,empleo,edad,horas);
-    fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",id,nombre,anio,genero);
+
+
+    fscanf(pFile,"%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %[^\n]\n",fecha,clase, comprobante, razonSocial,cuit,netoGravado,iva,exento,percepcion,total);
+
 
 
     while(!feof(pFile))

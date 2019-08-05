@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1564153689 source:c:\users\matu\desktop\practicas\2019\hardcode_pruebapunteros\main.c
+	<stdio.h>
+	<stdlib.h>
+

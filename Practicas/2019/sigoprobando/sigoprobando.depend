@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1563146496 source:c:\users\matu\desktop\practicas\2019\sigoprobando\main.c
+	<stdio.h>
+	<stdlib.h>
+

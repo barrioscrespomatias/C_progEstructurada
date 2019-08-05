@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1563111233 source:c:\users\matu\desktop\practicas\2019\breakcontinue\main.c
+	<stdio.h>
+	<stdlib.h>
+

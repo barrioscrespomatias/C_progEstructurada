@@ -174,16 +174,16 @@ int main()
         switch(option)
         {
         case 1:
-                getString("Ingrese nombre del archivo que desea abrir: ",nombreArchivo);
-                if(strcmp(nombreArchivo,"datosMF1")== 0)
-                {
-                    controller_loadFromText("datosMF1",listaPeliculas);
-                }
-                else
-                {
-                    printf("No se pudo abrir.\n");
-                    system("pause");
-                }
+//                getString("Ingrese nombre del archivo que desea abrir: ",nombreArchivo);
+//                if(strcmp(nombreArchivo,"datosMF1")== 0)
+//                {
+                    controller_loadFromText("libro.xlsx",listaPeliculas);
+//                }
+//                else
+//                {
+//                    printf("No se pudo abrir.\n");
+//                    system("pause");
+//                }
 
             break;
 //        case 2:
